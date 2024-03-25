@@ -64,13 +64,11 @@ const FooterSection3 = () => {
                     <div className="footer-menu title-anim">
                       <ul className="footer-menu-list mb-30">
                         <li>
-                          <span className="foot-link title-anim">
-                            1234 Main Street Anytown, USA 12345
-                          </span>
+                
                         </li>
                       </ul>
                       <div className="footer-9-logo">
-                        <img src="img/logo-8.png" alt="logo" />
+                        <img src="img/enmotion.png" alt="logo" />
                       </div>
                     </div>
                   </motion.div>
@@ -91,18 +89,18 @@ const FooterSection3 = () => {
                       <ul className="footer-menu-list mb-40">
                         <li>
                           <a
-                            href="tel:+555555-5555"
+                            href="tel:+786925-8086"
                             className="foot-link title-anim"
                           >
-                            + (555) 555-5555
+                            + (786) 925-8086
                           </a>
                         </li>
                         <li>
                           <a
-                            href="mailto:example@email.com"
+                            href="miguelricaurte@hotmail.com"
                             className="foot-link title-anim"
                           >
-                            example@email.com
+                            miguelricaurte@hotmail.com
                           </a>
                         </li>
                       </ul>
@@ -153,11 +151,7 @@ const FooterSection3 = () => {
                             My Services
                           </a>
                         </li>
-                        <li>
-                          <a href="#" className="foot-link title-anim">
-                            News & Article
-                          </a>
-                        </li>
+                
                       </ul>
                     </div>
                   </motion.div>

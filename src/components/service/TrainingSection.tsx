@@ -25,7 +25,7 @@ const TrainingSection = () => {
                 }}
               >
                 <h2 className="title-anim">
-                  <CustomGsapTextSplit children="my training Formula" />
+                  <CustomGsapTextSplit children="OUR TRAINING FORMULA" />
                 </h2>
               </motion.div>
               <motion.div
@@ -42,10 +42,9 @@ const TrainingSection = () => {
                 }}
               >
                 <CustomGsapTextSplitLine
-                  children="Aerobics is a form of cardiovascular exercise that
-                    involves a combination of rhythmic movements,
-                    dance-like steps, and repetitive motions that are
-                    performed to music."
+                  children="En-motion is the first active and healthy community orinating from Ecuador.  We are led by young professionals of sports and physical
+                  activity, dedicated on promoting healthy lifestyles in a friendly and innovative way.  We work as a team with people, families, companies, commuties,
+                  and pbulic and private institutions, to promote healthy lifestyles and physical activity."
                   className="title-txt title-anim"
                 />
               </motion.div>

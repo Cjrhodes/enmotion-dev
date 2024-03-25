@@ -39,13 +39,9 @@ export default function Home() {
    <div id="mainContent">
      <TrainingSection />
      <AboutSection3 />
-     <TrainingProgram />
-     <ScheduleSection />
-     <VideoSection3 />
-     <PackageSection />
-     <GallerySection />
-     <TestimonialSection3 />
-     <BlogSection3 />
+     <TrainingProgram />    
+ 
+ 
      <IgPostSection />
    </div>
    <FooterSection3 />
