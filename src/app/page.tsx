@@ -9,6 +9,7 @@ import ContactFormModal from "@/components/modal/ContactFormModal";
 import HeroSlider from "@/components/hero/HeroSlider";
 import Lightbox from "@/components/modal/Lightbox";
 import { spaceGrotesk } from "./fonts";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "En Motion",

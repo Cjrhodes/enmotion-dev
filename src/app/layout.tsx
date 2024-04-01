@@ -14,6 +14,7 @@ import "../../public/css/responsive.css";
 import { Providers } from "@/redux/provider";
 import CustomCursor from "@/components/utils/CustomCursor";
 import { ToastContainer } from "react-toastify";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({
   children,
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Providers>
           <CustomCursor />
           {children}
+          <SpeedInsights />
           <ToastContainer />
         </Providers>
       </body>
