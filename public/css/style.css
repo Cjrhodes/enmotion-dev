@@ -116,18 +116,6 @@ main.home-9 {
     z-index: 2;
 }
 
-main.home-9::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: url(../img/noise.png) center center;
-    background-size: contain;
-    opacity: 0.5;
-    z-index: -1;
-}
 
 main.home-11 {
     background: var(--bg-black-2);
@@ -1006,10 +994,7 @@ nav.navigation-12 .container-fluid {
     position: relative;
 }
 
-.banner.banner-2 {
-    background: url(../img/banner-bg-2.jpg) center center no-repeat;
-    background-size: cover;
-}
+
 
 .banner .shape-1 {
     top: -50px;
@@ -1099,7 +1084,7 @@ img {
 }
 
 .banner.banner-8 {
-    background: url(../img/hero_bg_8.png) center center no-repeat;
+    background: url(../img/enmotion.png) center center no-repeat;
     background-size: cover;
     padding-top: 80px;
 }
@@ -1209,10 +1194,7 @@ img {
 }
 
 
-.banner.banner-9 {
-    background: url(../img/hero_bg_9.png) center center no-repeat;
-    background-size: cover;
-}
+
 
 .banner .banner-heading {
     position: relative;
@@ -1273,18 +1255,7 @@ main.home-8.home-9.actor-model-home .service-9 .service-list .service-hover img 
     z-index: 2;
 }
 
-.banner-10::after {
-    content: "";
-    position: absolute;
-    top: 150px;
-    right: 350px;
-    bottom: 0;
-    left: 80px;
-    background: url(../img/banner-10-vector.png) center left no-repeat;
-    background-size: cover;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    z-index: -1;
-}
+
 
 .banner-10 .banner-10-sidebar {
     position: absolute;
@@ -1329,13 +1300,6 @@ main.home-8.home-9.actor-model-home .service-9 .service-list .service-hover img 
     position: relative;
 }
 
-.banner-10 .banner-txt::after {
-    content: url(../img/banner-10-vector-2.png);
-    position: absolute;
-    top: 150px;
-    right: 0;
-    animation: heartbeat 1.5s ease-in-out infinite;
-}
 
 .banner-10 .banner-txt h4 {
     font-size: 48px;
@@ -1465,13 +1429,7 @@ main.home-8.home-9.actor-model-home .service-9 .service-list .service-hover img 
 }
 
 
-.banner-11 {
-    padding-top: 118px;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
-    background: url(../img/hero_bg-11.png) center center no-repeat;
-    background-size: cover;
-    position: relative;
-}
+
 
 .banner-11-social {
     position: absolute;
@@ -1585,12 +1543,6 @@ main.home-8.home-9.actor-model-home .service-9 .service-list .service-hover img 
 }
 
 
-.banner-12 {
-    padding-top: 75px;
-    background: url(../img/hero_bg-12.png) center center no-repeat;
-    background-size: cover;
-    position: relative;
-}
 
 .banner-12-sidebar {
     position: absolute;
@@ -1742,7 +1694,6 @@ main.home-8.home-9.actor-model-home .service-9 .service-list .service-hover img 
     width: 100%;
     height: 100%;
     transform: translateY(20%);
-    background: url(../img/about-bg.png) bottom center no-repeat;
     background-size: contain;
     opacity: .03;
     z-index: -1;
@@ -2282,17 +2233,7 @@ button.learning-btn:hover {
     z-index: 2;
 }
 
-.about-11 .img-wrap .part-img::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 110px;
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    background: url(../img/about-11-vector.png) center center no-repeat;
-    background-size: cover;
-    z-index: -1;
-}
+
 
 .about-11 .img-wrap .counter-box {
     position: absolute;
@@ -3150,10 +3091,6 @@ span.portfolio-title-arrow-span {
     position: relative;
 }
 
-.review-sec-2 {
-    background: url(../img/counter-bg.jpg) center center no-repeat;
-    background-size: cover;
-}
 
 .review-sec .animated-shape {
     top: -100px;
@@ -3872,21 +3809,7 @@ figure.tv-thumb-card-tm img {
     left: -80px;
 }
 
-.testimonial::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    background: url(../img/testimonial-bg.png) top center no-repeat;
-    background-size: cover;
-    z-index: -1;
-}
 
-.testimonial-2::after {
-    background: url(../img/testimonial-bg-2.png) top center no-repeat;
-}
 
 .testimonial .single-slider {
     background: var(--title-color);
@@ -4612,18 +4535,6 @@ figure.tv-thumb-card-tm img {
     z-index: 2;
 }
 
-.blog-card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60%;
-    height: 35%;
-    background: url(../img/dot-vector.png) top center no-repeat;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: -1;
-}
 
 .blog-card .post-date {
     position: absolute;
@@ -5176,21 +5087,8 @@ figure.tv-thumb-card-tm img {
     background: var(--background-color);
 }
 
-.newsletter_wrap {
-    background: url(../img/subscribe-bg.jpg) center center no-repeat;
-    background-size: cover;
-    padding: 60px 50px;
-    box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.11);
-    border-radius: 10px;
-    margin-bottom: -100px;
-    position: relative;
-    z-index: 2;
-}
 
-.newsletter-2 .newsletter_wrap {
-    background: url(../img/subscribe-bg-2.jpg) center center no-repeat;
-    background-size: cover;
-}
+
 
 .newsletter_content h2 {
     font-family: var(--lato-font);
@@ -6236,23 +6134,8 @@ footer.footer-2 .app-download a:hover {
     background: var(--btn-color);
 }
 
-.pc-landing-area {
-    background-image: url(../img/man-bg.jpg);
-    background-size: cover;
-    background-position: top right;
-}
 
-@media (max-width: 991px) {
-    .pc-landing-area {
-        background-image: url('../img/man-bg-sm.jpg') !important;
-    }
-}
 
-@media (max-width: 767px) {
-    .pc-landing-area {
-        background-image: url('../img/man-bg-xs.jpg') !important;
-    }
-}
 
 .pc-copyright-area {
     padding: 10px 0;
@@ -6997,19 +6880,6 @@ footer.footer-2 .app-download a:hover {
     right: 0px;
 }
 
-.offcanvas-overlay {
-    width: 100%;
-    left: 100%;
-    transition: all 0.8s ease-out 0s;
-    position: fixed;
-    background: #000;
-    height: 100vh;
-    top: 0;
-    bottom: 0;
-    opacity: 0.6;
-    z-index: 99;
-    cursor: url('../img/close.png'), auto;
-}
 
 .offcanvas-overlay.overlay-open {
     left: 0;
@@ -7811,18 +7681,6 @@ button.cinkes-side-admin-panel-close-btn:hover {
     margin-top: -120px;
     position: relative;
     z-index: 2;
-}
-
-.video-8.video-9 .counter-9::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../img/check-vector.png) center center no-repeat;
-    background-size: cover;
-    z-index: -1;
 }
 
 .counter-9 .counter-box {
@@ -8980,17 +8838,7 @@ pricing-10 .pricing-card.checked .plan-txt h5 {
     z-index: 2;
 }
 
-.why-choose-img-wrap::after {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -200px;
-    width: 324px;
-    height: 410px;
-    background: url(../img/why-choose-vector.png) center center no-repeat;
-    background-size: contain;
-    z-index: -1;
-}
+
 
 .why-choose-img-wrap .counter-txt {
     font-size: 50px;
@@ -9344,24 +9192,7 @@ pricing-10 .pricing-card.checked .plan-txt h5 {
 
 
 
-/*======= Call To Action Section of home 12 =======*/
-.cta-12 {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    background: url(../img/cta-12-bg.png) center center no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 2;
-}
 
-.cta-12-2 {
-    padding: 65px 0;
-    background: url(../img/cta-12-bg-2.png) center center no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: -116px;
-}
 
 .cta-12::after {
     content: "";
@@ -9730,17 +9561,6 @@ pricing-10 .pricing-card.checked .plan-txt h5 {
     padding: 40px 60px;
 }
 
-.showcase-4-wrap::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../img/noise.png) center center no-repeat;
-    background-size: cover;
-    opacity: 0.6;
-}
 
 .showcase-4-slider {
     position: absolute;
@@ -10713,7 +10533,7 @@ header.header-3.pc-header-transparent {
           top: 50%;
           transform: translateY(-50px);
           transition: $transition;
-          background-image: url(/img/main-slider/prev-1.png);
+
           background-position: left;
           background-repeat: no-repeat;
           width: 20px;

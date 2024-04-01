@@ -31,14 +31,12 @@ const AboutSection3 = () => {
                   </h2>
                 </motion.div>
 
+                
                 <CustomGsapTextSplitLine className="title-anim">
-                I am a Master's Degree holder in Psychology in Physical Activity & Sports from I.E.F.E, Quito-Ecuador, with an extensive background as a professional soccer player and a diverse range of coaching certifications, including IFPA, NFPT, Crossfit, and TRX, among others. My journey has transitioned from competing at high levels to empowering individuals across all ages with a focus on nurturing community leaders and promoting healthier lifestyles. Through tailored training programs, I aim to enhance human performance and instill a deep-seated understanding of physical and mental well-being.
-                </CustomGsapTextSplitLine>
-                <CustomGsapTextSplitLine className="title-anim">
-                My experience extends beyond the field into contributing to service foundations like the National Community Service and CLDH, where I apply my expertise to support those in need. I specialize in a wide array of training methodologies, including Functional Fitness, Combat Sports, Sport Psychology, and Sports Nutrition, employing a holistic approach that encompasses not only physical training but also cognitive and emotional development. My coaching philosophy centers on creating competitive programs that motivate and encourage a commitment to health and personal well-being.
+                Holding a Master's Degree in Psychology in Physical Activity & Sports and with a notable history as a professional soccer player, Miguel has shifted from competing on the field to coaching, with a deep commitment to enhancing the health and wellness of individuals and communities. [His/Her/Their] broad expertise encompasses a range of certifications, including IFPA and NFPT Personal Trainer, Crossfit, and specialized training in functional fitness and soccer. [Name] excels in guiding individuals of all ages towards realizing their physical potential, employing a personalized approach that caters to the unique needs of each client.
                 </CustomGsapTextSplitLine>
                 <CustomGsapTextSplitLine>
-                Now based in Miami, FL, working with the Cabeda Soccer Academy and other projects, I am passionately committed to guiding individuals toward achieving their fullest potential and leading healthier, more fulfilling lives. Whether it’s coaching young athletes, facilitating team-building activities, or assisting seniors in navigating a healthier lifestyle, my mission is to inspire and lead by example, fostering a culture of health, strength, and community leadership.
+                Driven by a mission to inspire and facilitate lasting change, Miguel demonstrates that with dedication and the right support, personal wellness and peak performance are attainable objectives for everyone. Through [his/her/their] programs at En Motion, [Name] is not just a coach but a transformative figure, leading by example and empowering clients to take charge of their health and well-being.
                 </CustomGsapTextSplitLine>
                 <motion.div
                   className="btn-box fade_bottom"
@@ -109,7 +107,7 @@ const AboutSection3 = () => {
                 <div className="img-wrap">
                   <div className="image-animation">
                     <motion.img
-                      src="img/about-img-10.png"
+                      src="img/miguel.jpg"
                       className="image-animatio-img"
                       alt="image"
                       initial={{

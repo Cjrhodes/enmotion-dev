@@ -22,7 +22,7 @@ const ContactPopupSection = ({ sectionOpen, handleClose }: Props) => {
         style="contact_us pt-120"
         headingStyle=""
         btnStyle=""
-        img="img/img-7.png"
+        img="img/enmotion.png"
         btnCentered
       />
     </div>

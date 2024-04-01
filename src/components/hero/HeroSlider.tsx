@@ -27,7 +27,7 @@ const HeroSlider: React.FC = () => {
             <div
               className="hero-slider-item"
               style={{
-                backgroundImage: `url(/img/main-slider/girlpushup.jpeg)`,
+                backgroundImage: `url(/img/girlpushup.jpeg)`,
               }}
             >
               <div className="d-table">
@@ -54,7 +54,7 @@ const HeroSlider: React.FC = () => {
             <div
               className="hero-slider-item"
               style={{
-                backgroundImage: `url(/img/main-slider/girl-kickboxing.jpeg)`,
+                backgroundImage: `url(/img/girl-kickboxing.jpeg)`,
               }}
             >
               <div className="d-table">
@@ -81,7 +81,7 @@ const HeroSlider: React.FC = () => {
             <div
               className="hero-slider-item"
               style={{
-                backgroundImage: `url(/img/main-slider/powerliftgirl.jpeg)`,
+                backgroundImage: `url(/img/powerliftgirl.jpeg)`,
               }}
             >
               <div className="d-table">

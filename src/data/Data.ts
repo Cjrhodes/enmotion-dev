@@ -277,26 +277,8 @@ const testimonialData2 = [
   {
     id: 1,
     img: "img/t8_1.png",
-    name: "John William",
-    title: "Mixcola Director",
-  },
-  {
-    id: 2,
-    img: "img/t8_2.png",
-    name: "Emily Jones",
-    title: "Marketing Manager",
-  },
-  {
-    id: 3,
-    img: "img/t8_1.png",
-    name: "Alex Thompson",
-    title: "Creative Designer",
-  },
-  {
-    id: 4,
-    img: "img/t8_2.png",
-    name: "Sophia Miller",
-    title: "Product Developer",
+    name: "Chris Rhodes",
+    title: "Senior Developer",
   },
 ];
 
