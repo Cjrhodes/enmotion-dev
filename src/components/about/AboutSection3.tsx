@@ -108,7 +108,7 @@ const AboutSection3 = () => {
                   <div className="image-animation">
                     <motion.img
                       src="img/miguel.jpg"
-                      className="image-animatio-img"
+                      className="image-animation-img"
                       alt="image"
                       initial={{
                         scale: 1.2,
