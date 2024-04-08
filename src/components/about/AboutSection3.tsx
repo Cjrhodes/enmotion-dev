@@ -107,7 +107,7 @@ const AboutSection3 = () => {
                 <div className="img-wrap">
                   <div className="image-animation">
                     <motion.img
-                      src="img/miguel.jpg"
+                      src="img/miguel.png"
                       className="image-animation-img"
                       alt="image"
                       initial={{
