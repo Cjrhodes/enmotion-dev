@@ -9,11 +9,10 @@ import ContactFormModal from "@/components/modal/ContactFormModal";
 import HeroSlider from "@/components/hero/HeroSlider";
 import Lightbox from "@/components/modal/Lightbox";
 import { spaceGrotesk } from "./fonts";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "En Motion",
-  description: "Developed by Azizur Rahman",
+  description: "Developed by Chris Rhodes",
 };
 export default function Home() {
   return (
@@ -27,8 +26,8 @@ export default function Home() {
      <AboutSection3 />
    </div>
    <FooterSection3 />
-   <ContactFormModal />
-   <Lightbox />
+  <ContactFormModal />
+
  </main>
 
   );

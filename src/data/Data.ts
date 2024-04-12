@@ -300,8 +300,8 @@ const serviceData3 = [
   },
   {
     id: 4,
-    img: "img/girl-gimblet-squat.png",
-    title: "Personal Session",
+    img: "img/sbb.png",
+    title: "Self Defense",
   },
 ];
 const trainingProgramData = [

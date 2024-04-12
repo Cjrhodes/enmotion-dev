@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 import { toggleSidebarOpen } from "@/redux/features/sidebarSlice";
 import { usePathname } from "next/navigation";
+import ResendModal from "../contact/ResendModal";
 
 type Props = {
   contactModal: boolean;
@@ -26,37 +27,21 @@ const HeaderSection = ({ contactModal }: Props) => {
     setIsHeaderFixed(false);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 200 && !isSidebarOpen) {
-        setIsHeaderFixed(true);
-      } else {
-        setIsHeaderFixed(false);
-      }
-    };
+  const handleScroll = () => {
+    if (window.scrollY >= 200 && !isSidebarOpen) {
+      setIsHeaderFixed(true);
+    } else {
+      setIsHeaderFixed(false);
+    }
+  };
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [dispatch]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 200 && !isSidebarOpen) {
-        setIsHeaderFixed(true);
-      } else {
-        setIsHeaderFixed(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isSidebarOpen]);
+  }, [handleScroll, isSidebarOpen]);
 
   return (
     <div className="wrapper">

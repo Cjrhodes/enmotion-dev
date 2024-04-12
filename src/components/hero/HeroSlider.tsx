@@ -27,6 +27,7 @@ const HeroSlider: React.FC = () => {
             <div
               className="hero-slider-item"
               style={{
+                color: "#fff",
                 backgroundImage: `url(/img/girlpushup.jpeg)`,
               }}
             >

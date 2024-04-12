@@ -46,7 +46,7 @@ const FooterSection3 = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1.2 }}
                   >
-                    <SubscribeForm formStyle="footer-9-form" btnStyle="" />
+                   
                   </motion.div>
                   <motion.div
                     className="col-sm-6 col-12"

@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <CustomCursor />
+          
           {children}
           <SpeedInsights />
           <ToastContainer />

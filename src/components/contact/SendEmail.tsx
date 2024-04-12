@@ -24,7 +24,7 @@ export default async function handler(
 
       const mailOptions = {
         from: `${name} <${email}>`,
-        to: 'recipient@example.com',
+        to: 'chrisxrhodes@gmail.com',
         subject: `New message from ${name}`,
         text: message,
       };

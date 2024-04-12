@@ -44,7 +44,7 @@ const TrainingSection = () => {
                 <CustomGsapTextSplitLine
                   children="En-motion is the first active and healthy community orinating from Ecuador.  We are led by young professionals of sports and physical
                   activity, dedicated on promoting healthy lifestyles in a friendly and innovative way.  We work as a team with people, families, companies, commuties,
-                  and pbulic and private institutions, to promote healthy lifestyles and physical activity."
+                  and public and private institutions, to promote healthy lifestyles and physical activity."
                   className="title-txt title-anim"
                 />
               </motion.div>

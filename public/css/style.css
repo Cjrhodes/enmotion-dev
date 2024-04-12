@@ -10430,7 +10430,7 @@ header.header-3.pc-header-transparent {
   }
   .hero-slider-area .social-wrap ul li.follow-us {
     text-transform: uppercase;
-    color: #ffffff;
+    color: black;
     position: relative;
     padding-right: 70px;
   }
@@ -10441,11 +10441,11 @@ header.header-3.pc-header-transparent {
     left: 102px;
     width: 50px;
     height: 1px;
-    background-color: #ffffff;
+    background-color: black;
     z-index: 1;
   }
   .hero-slider-area .social-wrap ul li a i {
-    color: #ffffff;
+    color: black;
     transition: all 0.5s;
   }
   .hero-slider-area .social-wrap ul li a:hover i {
@@ -10467,16 +10467,33 @@ header.header-3.pc-header-transparent {
   }
   .hero-slider-text h1 {
     font-size: 80px;
-    color: #ffffff;
+    color: black;
     margin-bottom: 20px;
     margin: 150px auto 0;
   }
   .hero-slider-text p {
-    color: #ffffff;
+    color: black;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 30px;
   }
+
+
+  .hero-slider-text.one h1  {
+    color: whitesmoke;
+  }
+
+  .hero-slider-text.three h1 {
+    color: black;
+  }
+  .hero-slider-text.one p  {
+    color: whitesmoke;
+  }
+
+  .hero-slider-text.three p{
+    color: whitesmoke;
+  }
+/*  Her
 /*  Hero Slider Area Style
 ======================================================*/
 .hero-slider-area {
