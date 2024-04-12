@@ -19,7 +19,7 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "chrisxrhodes@gmail.com",
+          from: "chrisxrhodes@enmotionfit.com",
           to: data.email,
           subject: `New message from ${data.fullName}`,
           html: `
@@ -33,10 +33,12 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
+        console.log("Form submitted successfully!");
         toast.success("Form submitted successfully!");
         reset();
       } else {
         const errorData = await response.json();
+        console.error(errorData.message || "Failed to send email");        
         throw new Error(errorData.message || "Failed to send email");
       }
     } catch (error) {

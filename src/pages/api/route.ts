@@ -7,7 +7,7 @@ export async function POST(req: Request) {
 
   try {
     await client.emails.send({
-      from: "chrisxrhodes.gmail.com",
+      from: "chrisxrhodes.enmotionfit.com",
       to: email,
       subject,
       html: message,

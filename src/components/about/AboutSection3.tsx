@@ -33,10 +33,11 @@ const AboutSection3 = () => {
 
                 
                 <CustomGsapTextSplitLine className="title-anim">
-                Holding a Master's Degree in Psychology in Physical Activity & Sports and with a notable history as a professional soccer player, Miguel has shifted from competing on the field to coaching, with a deep commitment to enhancing the health and wellness of individuals and communities. [His/Her/Their] broad expertise encompasses a range of certifications, including IFPA and NFPT Personal Trainer, Crossfit, and specialized training in functional fitness and soccer. [Name] excels in guiding individuals of all ages towards realizing their physical potential, employing a personalized approach that caters to the unique needs of each client.
+                With over a decade of immersion in the world of combat sports and self-defense, I bring a unique blend of expertise to help individuals achieve their fitness goals while developing invaluable skills for personal protection. My journey began with a passion for kickboxing, where I honed my skills in striking techniques, footwork, and mental fortitude. This experience instilled in me the importance of discipline and the ability to defend oneself in various situations.
+
                 </CustomGsapTextSplitLine>
                 <CustomGsapTextSplitLine>
-                Driven by a mission to inspire and facilitate lasting change, Miguel demonstrates that with dedication and the right support, personal wellness and peak performance are attainable objectives for everyone. Through [his/her/their] programs at En Motion, [Name] is not just a coach but a transformative figure, leading by example and empowering clients to take charge of their health and well-being.
+                Transitioning from a competitor to a coach, I now hold numerous high-performance certifications, including IFPA Certified Personal Trainer, NFPT Certified Personal Trainer, SFP Certified Trainer, Crossfit Coach, Cross Country Coach, Power Lifting Coach, and UFC Coach Certified. Additionally, I am a TRX Coach and CPR Certified, ensuring that my clients receive comprehensive training in a safe and controlled environment. My extensive knowledge of Functional Master Training allows me to design personalized programs that cater to individual needs, whether you're seeking self-defense skills, general fitness, or specialized athletic training.
                 </CustomGsapTextSplitLine>
                 <motion.div
                   className="btn-box fade_bottom"
