@@ -27,7 +27,6 @@ const HeroSlider: React.FC = () => {
             <div
               className="hero-slider-item"
               style={{
-                color: "#fff",
                 backgroundImage: `url(/img/girlpushup.jpeg)`,
               }}
             >
@@ -112,25 +111,21 @@ const HeroSlider: React.FC = () => {
           <ul>
             <li className="follow-us">Follow Us:</li>
             <li>
-              <a href="https://twitter.com/" target="_blank">
-                <i className="bx bxl-twitter"></i>
+              <a href="https://twitter.com/enmotionfit" target="_blank">
+              <i className="fa-brands fa-x"></i>
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/" target="_blank">
+              <a href="https://www.instagram.com/enmotionfit/?hl=en" target="_blank">
                 <i className="bx bxl-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="https://facebook.com/" target="_blank">
+              <a href="https://www.facebook.com/profile.php?id=61558229676688" target="_blank">
                 <i className="bx bxl-facebook"></i>
               </a>
             </li>
-            <li>
-              <a href="https://youtube.com/" target="_blank">
-                <i className="bx bxl-youtube"></i>
-              </a>
-            </li>
+
           </ul>
         </div>
       </div>

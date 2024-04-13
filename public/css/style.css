@@ -1560,6 +1560,7 @@ main.home-8.home-9.actor-model-home .service-9 .service-list .service-hover img 
     display: flex;
     gap: 26px;
     transform: rotate(180deg);
+    color: red;
 }
 
 .banner-12-sidebar .title {
@@ -10430,7 +10431,7 @@ header.header-3.pc-header-transparent {
   }
   .hero-slider-area .social-wrap ul li.follow-us {
     text-transform: uppercase;
-    color: black;
+    color: whitesmoke;
     position: relative;
     padding-right: 70px;
   }
@@ -10441,11 +10442,11 @@ header.header-3.pc-header-transparent {
     left: 102px;
     width: 50px;
     height: 1px;
-    background-color: black;
+    background-color: whitesmoke;
     z-index: 1;
   }
   .hero-slider-area .social-wrap ul li a i {
-    color: black;
+    color: whitesmoke;
     transition: all 0.5s;
   }
   .hero-slider-area .social-wrap ul li a:hover i {

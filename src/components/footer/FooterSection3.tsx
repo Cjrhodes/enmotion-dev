@@ -15,22 +15,20 @@ const FooterSection3 = () => {
       <footer className="footer-8 footer-9 footer-10">
         <div className="container">
           <div className="footer-top">
-            <div className="row justify-content-between gx-0 gy-lg-0 gy-4">
+            <div className="row justify-content-between gx-0 gy-lg-0 gy-1">
               
-                <h2 className="footer-9-title title-anim">
-                  <CustomGsapTextSplit>Let's Talk With Me</CustomGsapTextSplit>
-                </h2>
+           
                 <button
                   className="def-btn btn-hover def-btn-8"
                   onClick={openContactModal}
                 >
                   <span className="dot"></span>
                   <span className="txt">
-                    Click to contact{" "}
+                    Get Started Here{" "}
                     <i className="fa-light fa-arrow-up-right"></i>
                   </span>
                 </button>
-           
+           <span className="footer-10-subtitle"></span>
               <div className="col-lg-6">
                 <div className="row gx-5 gy-4 gy-sm-0">
                   <motion.div
@@ -90,34 +88,30 @@ const FooterSection3 = () => {
                         <li>
                           <a
                             href="tel:+786925-8086"
-                            className="foot-link title-anim"
-                          >
+                            className="foot-link title-anim"                          >
                             + (786) 925-8086
                           </a>
                         </li>
                         <li>
                           <a
                             href="miguelricaurte@hotmail.com"
-                            className="foot-link title-anim"
-                          >
+                            className="foot-link title-anim"                          >
                             miguelricaurte@hotmail.com
                           </a>
                         </li>
                       </ul>
                       <span className="footer-10-subtitle">Follow Me:</span>
                       <div className="footer-10-social">
-                        <a href="#" className="title-anim">
+                        <a href="https://www.facebook.com/profile.php?id=61558229676688" className="title-anim">
                           <i className="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="#" className="title-anim">
-                          <i className="fa-brands fa-x-twitter"></i>
+                        <a href="https://twitter.com/enmotionfit"  className="title-anim">
+                          <i className="fa-brands fa-x"></i>
                         </a>
-                        <a href="#" className="title-anim">
+                        <a href="https://www.instagram.com/enmotionfit/?hl=en" className="title-anim">
                           <i className="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="#" className="title-anim">
-                          <i className="fa-brands fa-tiktok"></i>
-                        </a>
+      
                       </div>
                     </div>
                   </motion.div>
