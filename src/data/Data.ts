@@ -307,23 +307,33 @@ const serviceData3 = [
 const trainingProgramData = [
   {
     id: 1,
-    title: "Self_Defense",
+    title: "Self-Defense",
     img: "img/training-program-1.png",
+    desc: "Self-defense is a countermeasure that involves defending oneself, one's property, or the well-being of another from harm.",
   },
   {
     id: 2,
-    title: "Body pump",
+    title: "Personal Training",
     img: "img/training-program-2.png",
+    desc: "Personal training is a one-on-one basis with a certified personal trainer.",
   },
   {
     id: 3,
-    title: "Mauy Thai",
+    title: "Corporate Wellness",
     img: "img/training-program-3.png",
+    desc: "Corporate wellness programs are designed to nurture wellness in workers, regardless of the work environment.",
   },
   {
-    id: 6,
-    title: "Crossfit",
+    id: 4,
+    title: "Group Classes",
     img: "img/training-program-6.png",
+    desc: "Group fitness classes are a great way to get in a workout without having to think or plan.",
+  },
+  {
+    id: 5,
+    title: "Online Services",
+    img: "img/training-program-6.png",
+    desc: "Online training is a great way to get in a workout without having to think or plan.",
   },
 ];
 

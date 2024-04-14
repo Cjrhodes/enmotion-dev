@@ -7,6 +7,7 @@ import FooterSection3 from "@/components/footer/FooterSection3";
 import SidebarSection from "@/components/side-panel/SidebarSection";
 import ContactFormModal from "@/components/modal/ContactFormModal";
 import HeroSlider from "@/components/hero/HeroSlider";
+import TrainingProgram from "@/components/program/TrainingProgram";
 import Lightbox from "@/components/modal/Lightbox";
 import { spaceGrotesk } from "./fonts";
 
@@ -22,8 +23,9 @@ export default function Home() {
    <HeaderSection contactModal={true} />
    <HeroSlider />
    <div id="mainContent">
-     <TrainingSection />
      <AboutSection3 />
+     <TrainingProgram />
+
    </div>
    <FooterSection3 />
   <ContactFormModal />

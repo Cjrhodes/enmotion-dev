@@ -5360,7 +5360,7 @@ footer.footer-2 .app-download a:hover {
 }
 
 .footer-8 {
-    background: var(--bg-black);
+    background: rgb(39, 38, 38);
 }
 
 .footer-8 .footer-heading {
@@ -5482,6 +5482,7 @@ footer.footer-2 .app-download a:hover {
 }
 
 .footer-9 .footer-bottom {
+    color: pink;
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, .1);
 }
@@ -10682,7 +10683,7 @@ header.header-3.pc-header-transparent {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 75vh;
   }
   .hero-slider-text {
     text-align: center;

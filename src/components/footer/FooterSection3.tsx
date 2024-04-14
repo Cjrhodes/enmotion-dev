@@ -12,7 +12,7 @@ const FooterSection3 = () => {
   };
   return (
     <section>
-      <footer className="footer-8 footer-9 footer-10">
+      <footer className="footer-8">
         <div className="container">
           <div className="footer-top">
             <div className="row justify-content-between gx-0 gy-lg-0 gy-1">
@@ -128,26 +128,7 @@ const FooterSection3 = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1.2 }}
                   >
-                    <div className="footer-menu title-anim">
-                      <ul className="footer-menu-list">
-                        <li>
-                          <a href="#" className="foot-link title-anim">
-                            About Me
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="foot-link title-anim">
-                            Class Schedule
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="foot-link title-anim">
-                            My Services
-                          </a>
-                        </li>
-                
-                      </ul>
-                    </div>
+                   
                   </motion.div>
                 </div>
               </div>
@@ -169,7 +150,7 @@ const FooterSection3 = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 1.2 }}
                 >
-                  <p>© {new Date().getFullYear()} All Rights Reserved</p>
+  
                 </motion.div>
               </div>
               <motion.div
@@ -185,11 +166,7 @@ const FooterSection3 = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1.2 }}
               >
-                <div className="footer-9-link d-flex justify-content-center justify-content-sm-end">
-                  <a href="#">Privacy Policy</a>
-                  <a href="#">Terms & Conditions</a>
-                  <a href="#">Sitemap</a>
-                </div>
+    
               </motion.div>
             </div>
           </div>

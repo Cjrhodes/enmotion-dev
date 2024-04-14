@@ -9,7 +9,7 @@ import { toggleLightboxOpen } from "@/redux/features/lightboxSlice";
 const TrainingProgram = () => {
   const dispatch = useAppDispatch();
   return (
-    <section>
+    <section id="TrainingProgram">
       <div className="training-program-10 bg-dark bg-opacity-25">
         <div className="container">
           <div className="section-heading-8 section-heading-10">
@@ -28,7 +28,7 @@ const TrainingProgram = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="title-anim">
-                  <CustomGsapTextSplit children="my training programs" />
+                  <CustomGsapTextSplit children="Our training programs" />
                 </h2>
               </motion.div>
               <motion.div
@@ -44,12 +44,7 @@ const TrainingProgram = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <CustomGsapTextSplitLine className="title-txt title-anim">
-                  Aerobics is a form of cardiovascular exercise that involves a
-                  combination of rhythmic movements, dance-like steps, and
-                  repetitive motions that are performed to music. It is designed
-                  to increase the heart rate.
-                </CustomGsapTextSplitLine>
+ 
               </motion.div>
             </div>
           </div>
@@ -87,8 +82,7 @@ const TrainingProgram = () => {
                         <div className="row align-items-center">
                           <div className="col-9">
                             <CustomGsapTextSplitLine>
-                              Aerobics is a form of cardiovascular exercise that
-                              involves a combination of rhythmic movements.
+                            {item.desc}
                             </CustomGsapTextSplitLine>
                           </div>
                           <div className="col-3">
@@ -138,12 +132,7 @@ const TrainingProgram = () => {
             viewport={{ once: true }}
             className="section-btn-10 justify-content-center fade_bottom"
           >
-            <a href="#" className="def-btn btn-hover def-btn-10">
-              <span className="dot"></span>
-              <span className="txt">
-                View All <i className="fa-regular fa-arrow-up-right"></i>
-              </span>
-            </a>
+  
           </motion.div>
         </div>
       </div>

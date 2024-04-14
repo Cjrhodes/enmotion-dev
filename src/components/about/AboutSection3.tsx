@@ -27,17 +27,19 @@ const AboutSection3 = () => {
                   viewport={{ once: true }}
                 >
                   <h2 className="title-anim">
-                    <CustomGsapTextSplit children="about me" />
+                    <CustomGsapTextSplit children="About us" />
                   </h2>
                 </motion.div>
 
                 
-                <CustomGsapTextSplitLine className="title-anim">
-                With over a decade of immersion in the world of combat sports and self-defense, I bring a unique blend of expertise to help individuals achieve their fitness goals while developing invaluable skills for personal protection. My journey began with a passion for kickboxing, where I honed my skills in striking techniques, footwork, and mental fortitude. This experience instilled in me the importance of discipline and the ability to defend oneself in various situations.
-
+                <CustomGsapTextSplitLine className="title-anim">                
+                At En Motion, performance is at the forefront of everything we do. Our one-on-one personal training is custom-designed to help clients demolish their fitness goals - whether they are athletes looking to take their game to the next level, individuals recovering from injuries, or those simply wanting to build strength and endurance to power through life's challenges. We are dedicated to unlocking the untapped potential in every client.
                 </CustomGsapTextSplitLine>
                 <CustomGsapTextSplitLine>
-                Transitioning from a competitor to a coach, I now hold numerous high-performance certifications, including IFPA Certified Personal Trainer, NFPT Certified Personal Trainer, SFP Certified Trainer, Crossfit Coach, Cross Country Coach, Power Lifting Coach, and UFC Coach Certified. Additionally, I am a TRX Coach and CPR Certified, ensuring that my clients receive comprehensive training in a safe and controlled environment. My extensive knowledge of Functional Master Training allows me to design personalized programs that cater to individual needs, whether you're seeking self-defense skills, general fitness, or specialized athletic training.
+                This performance-driven philosophy underlies all of our one-on-one training sessions. Each workout program is meticulously crafted not just to prepare our clients, but to ensure they operate at peak levels when it matters most. Our expert trainers cultivate an environment of unwavering support while continually pushing clients to surpass their limits. We focus on systematically enhancing physical capabilities, endurance, and resilience so clients can go the distance.
+                </CustomGsapTextSplitLine>
+                <CustomGsapTextSplitLine>
+                When you train one-on-one at En Motion, you receive a fully customized regimen to equip you with the tools for elite performance. We understand that every client is on a unique fitness journey. That's why our trainers are wholeheartedly committed to fueling each individual's health and fitness goals. Our mission is to prime our clients for conquering any obstacle they face - whether that's a competitive event, rehabilitation after an injury, or simply the unpredictable demands of daily life.
                 </CustomGsapTextSplitLine>
                 <motion.div
                   className="btn-box fade_bottom"
@@ -54,12 +56,7 @@ const AboutSection3 = () => {
                     duration: 1.5,
                   }}
                 >
-                  <a href="#" className="def-btn btn-hover def-btn-10">
-                    <span className="dot"></span>
-                    <span className="txt">
-                      Read More <i className="fa-regular fa-arrow-up-right"></i>
-                    </span>
-                  </a>
+     
                 </motion.div>
                 <span className="name-vector">En Motion </span>
               </div>

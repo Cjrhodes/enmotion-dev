@@ -24,11 +24,11 @@ const ContactFormModal = () => {
       centered
     >
       <Modal.Header>
-        <h3 className="modal-title" id="contactModalLabel">
-          Contact With Me
+        <h3 className="modal-title" >
+          Contact Us
         </h3>
         <button onClick={closeContactModal}>
-          <i className="fa-light fa-times"></i>
+     
         </button>
       </Modal.Header>
       <Modal.Body>

@@ -45,7 +45,7 @@ const SidebarSection = ({ logo, contactHashlink }: Props) => {
               <Link href="#About">About</Link>
             </li>
             <li>
-              <Link href="#Service">Service</Link>
+              <Link href="#TrainingProgram">Services</Link>
             </li>
             <li>
               <Link href="#Portfolio">Portfolio</Link>

@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 import { toggleSidebarOpen } from "@/redux/features/sidebarSlice";
 import { usePathname } from "next/navigation";
-import ResendModal from "../contact/ResendModal";
+import TrainingProgram from "@/components/program/TrainingProgram";
+
 
 type Props = {
   contactModal: boolean;
@@ -135,7 +136,7 @@ const HeaderSection = ({ contactModal }: Props) => {
                           )}
                         </li>
                         <li className="nav-item">
-                          <Link className="nav-link" href="#Blog">
+                          <Link className="nav-link" href="#TrainingProgram">
                             Services
                           </Link>
                         </li>

@@ -10,8 +10,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ message: `HTTP method ${req.method} is not supported.` });
   }
 
-  const { from, to, subject, html } = req.body;
-  
+  const { to, subject, html } = req.body;
+  const from = to;
   resend.emails.send({
     from,
     to,
