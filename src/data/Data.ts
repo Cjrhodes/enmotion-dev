@@ -314,7 +314,7 @@ const trainingProgramData = [
   {
     id: 2,
     title: "Personal Training",
-    img: "img/trx-kettlebell.jpeg",
+    img: "img/girl-mit.jpeg",
     desc: "Personal training is a one-on-one basis with a certified personal trainer.",
   },
   {
