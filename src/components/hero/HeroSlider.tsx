@@ -43,6 +43,7 @@ const HeroSlider: React.FC = () => {
                 <div className="d-table-cell">
                   <div className="container">
                     <div className="hero-slider-text two">
+                      
                       <h1>Wellness That Works</h1>
                       <p>
                         Tailored Health Strategies for Individuals and Teams
@@ -62,6 +63,64 @@ const HeroSlider: React.FC = () => {
               </div>
             </div>
           </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="hero-slider-item"
+              style={{
+                backgroundImage: `url(/img/teamfitness.jpeg)`,
+              }}
+            >
+              <div className="d-table">
+                <div className="d-table-cell">
+                  <div className="container">
+                    <div className="hero-slider-text three">
+                    <h1>Boost Team Wellness and Productivity</h1>
+<p>En Motion's corporate wellness boosts health and productivity with classes for all levels, fostering a vibrant workplace culture.</p>
+
+
+
+                      <div className="slider-btn">
+                     <Link
+  href="#"
+  className="default-btn"
+  onClick={openContactModal}
+>
+  Get Started
+</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="hero-slider-item"
+              style={{
+                backgroundImage: `url(/img/girlpushup.jpeg)`,
+              }}
+            >
+              <div className="d-table">
+                <div className="d-table-cell">
+                  <div className="container">
+                    <div className="hero-slider-text one">
+                    <h1>Discover Your Peak Potential</h1>
+<p>En Motion offers personalized training to reach your health goals. Our certified trainers craft custom workouts for effective, motivating sessions.</p>
+
+
+                      <div className="slider-btn">
+                        <Link href="#" className="default-btn">
+                          View More
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
         </Swiper>
         {/* Social Wrap */}
         <div className="social-wrap">

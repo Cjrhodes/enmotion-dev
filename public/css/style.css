@@ -10305,7 +10305,7 @@ header.header-3.pc-header-transparent {
         text-align: center; /* Center the text horizontally */
         width: 100%; /* Ensure the text block takes full width */
         position: absolute;
-        top: 28%; /* Position at half the height of the slider */
+        top: 30%; /* Position at half the height of the slider */
         left: 50%; /* Position at half the width of the slider */
         transform: translate(-50%, -50%); /* Adjust the position to truly center */
         display: flex;
@@ -10316,11 +10316,13 @@ header.header-3.pc-header-transparent {
       }
   
       .hero-slider-text h1 {
-        color: whitesmoke; /* Example: changing h1 color to red */
+        color: whitesmoke;
+        font-size: 80px; /* Example: changing h1 color to red */
       }
   
       .hero-slider-text p {
-        color: silver; /* Example: changing paragraph color to green */
+        font-size: 15px;
+        color: whitesmoke; /* Example: changing paragraph color to green */
       }
     }
   }
