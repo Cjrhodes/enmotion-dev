@@ -75,33 +75,7 @@ const AboutSection3 = () => {
                   duration: 1.2,
                 }}
               >
-                <span className="svg-wrap">
-                  <svg viewBox="0 0 100 100" width="100" height="100">
-                    <defs>
-                      <path
-                        id="circle"
-                        d="
-                        M 50, 50
-                        m -40, 0
-                        a 40,40 0 1,1 80,0
-                        a 40,40 0 1,1 -80,0"
-                      />
-                    </defs>
-                    <text>
-                      <textPath xlinkHref="#circle" startOffset="0%">
-                        FITNESS AND STRENGTH POWER. FITNESS AND STRENGTH POWER.
-                      </textPath>
-                    </text>
-                  </svg>
-                  <span className="counter">
-                    <CountUp
-                      start={1}
-                      end={65}
-                      duration={5}
-                      formattingFn={(value) => `${value}K`}
-                    />
-                  </span>
-                </span>
+               
                 <div className="img-wrap">
                   <div className="image-animation">
                     <motion.img
