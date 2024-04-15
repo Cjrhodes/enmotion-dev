@@ -10468,7 +10468,8 @@ header.header-3.pc-header-transparent {
     margin: 150px auto 0;
   }
   .hero-slider-text h1 {
-    font-size: 80px;
+    font-size: 25px;
+    size: 25px;
     color: black;
     margin-bottom: 20px;
     margin: 150px auto 0;
@@ -10487,6 +10488,7 @@ header.header-3.pc-header-transparent {
 
   .hero-slider-text.three h1 {
     color: black;
+    font-size: medium;
   }
   .hero-slider-text.one p  {
     color: whitesmoke;
