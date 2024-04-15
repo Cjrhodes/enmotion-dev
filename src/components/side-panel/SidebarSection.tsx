@@ -47,9 +47,7 @@ const SidebarSection = ({ logo, contactHashlink }: Props) => {
             <li>
               <Link href="#TrainingProgram">Services</Link>
             </li>
-            <li>
-              <Link href="#Portfolio">Portfolio</Link>
-            </li>
+    
             <li>
               {!contactHashlink ? (
                 <a role="button" onClick={openContactModal}>
@@ -59,9 +57,7 @@ const SidebarSection = ({ logo, contactHashlink }: Props) => {
                 <Link href="#Contact">Contact</Link>
               )}
             </li>
-            <li>
-              <Link href="#Blog">Blog</Link>
-            </li>
+
           </ul>
         </div>
       </div>

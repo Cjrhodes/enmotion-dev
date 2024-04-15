@@ -1786,6 +1786,9 @@ button.learning-btn:hover {
 .about-8 .about-img {
     position: relative;
 }
+.about-8  {
+    background-color: rgb(39, 38, 38);;
+}
 
 .about-8 .about-img::after {
     content: "";
@@ -10296,12 +10299,32 @@ header.header-3.pc-header-transparent {
     width: 375px; 
   }
 
-  .hero-slider-area {
-    position: relative;
+  .hero-slider {
+    .swiper-slide.swiper-slide-active {
+      .hero-slider-text {
+        text-align: center; /* Center the text horizontally */
+        width: 100%; /* Ensure the text block takes full width */
+        position: absolute;
+        top: 30%; /* Position at half the height of the slider */
+        left: 50%; /* Position at half the width of the slider */
+        transform: translate(-50%, -50%); /* Adjust the position to truly center */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF; /* Change text color to white */
+      }
+  
+      .hero-slider-text h1 {
+        color: whitesmoke; /* Example: changing h1 color to red */
+      }
+  
+      .hero-slider-text p {
+        color: silver; /* Example: changing paragraph color to green */
+      }
+    }
   }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text {
-    overflow: hidden;
-  }
+  
   .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.one h1 {
     animation: 1s 0.1s fadeInUpBig both;
   }
@@ -10354,7 +10377,7 @@ header.header-3.pc-header-transparent {
     transform: translateY(-50%);
     transition: all 0.5s;
     background-image: url(/img/main-slider/prev-2.png);
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     width: 20px;
     height: 100px;
@@ -10455,15 +10478,15 @@ header.header-3.pc-header-transparent {
   }
   
   .hero-slider-item {
-    background-position: center center;
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: auto;
     height: 100vh;
   }
   
   .hero-slider-text {
-    text-align: center;
-    text-align: center;
+    text-align: right;
+    text-align: relative;
     max-width: 900px;
     margin: 150px auto 0;
   }
@@ -10653,7 +10676,7 @@ header.header-3.pc-header-transparent {
             text-transform: uppercase;
             color: $white-color;
             position: relative;
-            padding-right: 70px;
+            padding-right: 100px;
   
             &::before {
               content: "";
@@ -10685,13 +10708,13 @@ header.header-3.pc-header-transparent {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75vh;
+    height: 95vh;
   }
   .hero-slider-text {
-    text-align: center;
+    text-align: left;
     text-align: center;
     max-width: 900px;
-    margin: 70px auto 0;
+    margin: 100px auto 0;
     h1 {
       font-size: 80px;
       color: $white-color;

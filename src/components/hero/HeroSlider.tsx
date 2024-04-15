@@ -35,7 +35,8 @@ const HeroSlider: React.FC = () => {
             <div
               className="hero-slider-item"
               style={{
-                backgroundImage: `url(/img/girl-kickboxing.jpeg)`,
+                backgroundImage: `url(/img/girl-kickboxing1.png
+                )`,
               }}
             >
               <div className="d-table">

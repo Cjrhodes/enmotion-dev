@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 import { toggleSidebarOpen } from "@/redux/features/sidebarSlice";
 import { usePathname } from "next/navigation";
-import TrainingProgram from "@/components/program/TrainingProgram";
 
 
 type Props = {
