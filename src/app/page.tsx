@@ -20,9 +20,10 @@ export default function Home() {
 
 <main className={`home-11 trainer-home ${spaceGrotesk.className}`}>   
    <SidebarSection logo="img/enmotion.png" />
+ 
+   <div id="mainContent">
    <HeaderSection contactModal={true} />
    <HeroSlider />
-   <div id="mainContent">
      <AboutSection3 />
      <TrainingProgram />
 

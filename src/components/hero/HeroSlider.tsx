@@ -43,11 +43,9 @@ const HeroSlider: React.FC = () => {
                 <div className="d-table-cell">
                   <div className="container">
                     <div className="hero-slider-text two">
-                      <h1>Empower Your Defense</h1>
+                      <h1>Wellness That Works</h1>
                       <p>
-                        Learn practical self-defense with En Motion. Our courses
-                        boost confidence and prepare you for any situation,
-                        enhancing safety and awareness.
+                        Tailored Health Strategies for Individuals and Teams
                       </p>
                       <div className="slider-btn">
                         <Link
