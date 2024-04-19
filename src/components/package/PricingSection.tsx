@@ -1,8 +1,11 @@
+"use client";
+
 import { packageData } from "@/data/Data";
 import React from "react";
 import CustomGsapTextSplit from "../utils/CustomGsapTextSplit";
 import CustomGsapTextSplitLine from "../utils/CustomGsapTextSplitLine";
 import { motion } from "framer-motion";
+
 const PricingSection = () => {
   return (
     <div className="pricing-cards fade_left">

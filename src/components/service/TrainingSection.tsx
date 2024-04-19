@@ -1,7 +1,7 @@
 "use client";
 import { serviceData3 } from "@/data/Data";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, px } from "framer-motion";
 import CustomGsapTextSplit from "../utils/CustomGsapTextSplit";
 import CustomGsapTextSplitLine from "../utils/CustomGsapTextSplitLine";
 const TrainingSection = () => {
@@ -71,7 +71,7 @@ const TrainingSection = () => {
                     }}
                   >
                     <a href="#">
-                      <img src={item.img} alt="image" />
+                      <img  src={item.img} alt="image" />
                     </a>
                   </motion.div>
                   <motion.h3

@@ -6,7 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 import { useAppDispatch } from "@/redux/hooks";
-import styles from './Slider.module.css';
+
 
 const HeroSlider: React.FC = () => {
   const dispatch = useAppDispatch(); // Move the hook call inside the component

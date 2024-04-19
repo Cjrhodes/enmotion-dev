@@ -1,32 +1,35 @@
 import Link from "next/link";
-
-
+import { useState } from "react";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav>
-      <div className="navContainer">
-
-        <div className="logo">
+    
+  <div className={styles.navContainer}>
+    <div className={styles.logo}>
           <a href="#">
             <img src="/img/whitelogo.png" alt="Logo" className="logoImg" />
           </a>
-        </div>      
-        <div className="navLinks">
-        <Link href="#About">
-<span className="dot"></span>{" "}
-<span className="txt">About</span>
-</Link>
-        <Link href="#TrainingProgram">
-<span className="dot"></span>{" "}
-<span className="txt">Programs</span>
-</Link>
-<Link href="#TrainingProgram">
-<span className="dot"></span>{" "}
-<span className="txt">Staff</span>
-</Link>
         </div>
-        <div className="socialLinks">
+        <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
+          <Link href="#About">
+            <span className="dot"></span>{" "}
+            <span className="txt">About</span>
+          </Link>
+          <Link href="#TrainingProgram">
+            <span className="dot"></span>{" "}
+            <span className="txt">Programs</span>
+          </Link>
+ 
+        </div>
+        <div className={styles.socialLinks}>
           <a href="https://twitter.com/enmotionfit" className="socialLink">
             <i className="fab fa-instagram"></i>
           </a>
@@ -37,11 +40,14 @@ const Navbar = () => {
             <i className="fa-brands fa-x"></i>
           </a>
         </div>
+        <div className={styles.hamburger} onClick={toggleMenu}>
+      <div className={styles.line}></div>
+      <div className={styles.line}></div>
+      <div className={styles.line}></div>
+</div>
       </div>
     </nav>
   );
 };
-
-
 
 export default Navbar;

@@ -8,6 +8,7 @@ import SidebarSection from "@/components/side-panel/SidebarSection";
 import ContactFormModal from "@/components/modal/ContactFormModal";
 import HeroSlider from "@/components/hero/HeroSlider";
 import TrainingProgram from "@/components/program/TrainingProgram";
+import PricingSection from "@/components/package/PricingSection";
 import Lightbox from "@/components/modal/Lightbox";
 
 import { spaceGrotesk } from "./fonts";
@@ -27,6 +28,8 @@ export default function Home() {
    <HeroSlider />
      <AboutSection3 />
      <TrainingProgram />
+
+ 
 
    </div>
    <FooterSection3 />

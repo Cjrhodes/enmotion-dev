@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navigation2 from "./Navigation2";

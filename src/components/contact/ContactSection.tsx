@@ -60,7 +60,7 @@ const ContactSection = () => {
               transition={{ duration: 1.2, ease: "easeIn" }}
               viewport={{ once: true }}
             >
-              <ContactForm />
+              <ContactForm selectedPackage={""} />
             </motion.div>
           </div>
         </div>

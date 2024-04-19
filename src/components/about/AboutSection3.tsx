@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import CountUp from "react-countup";
+
 import AboutTextSlider from "../slider/AboutTextSlider";
 import { motion } from "framer-motion";
 import CustomGsapTextSplitLine from "../utils/CustomGsapTextSplitLine";
@@ -8,7 +8,7 @@ import CustomGsapTextSplit from "../utils/CustomGsapTextSplit";
 const AboutSection3 = () => {
   return (
     <section id="About">
-      <div className="about-8 about-10">
+      <div className="about-8 about-10" >
         <div className="container">
           <div className="row align-items-center justify-content-between row-gap-lg-0 row-gap-5">
             <div className="col-lg-6">

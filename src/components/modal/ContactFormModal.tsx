@@ -32,7 +32,7 @@ const ContactFormModal = () => {
         </button>
       </Modal.Header>
       <Modal.Body>
-        <ContactForm />
+        <ContactForm selectedPackage={""} />
       </Modal.Body>
     </Modal>
   );

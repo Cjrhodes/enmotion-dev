@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "../../public/css/style.css";
 import "../../public/css/responsive.css";
 import { Providers } from "@/redux/provider";
-import CustomCursor from "@/components/utils/CustomCursor";
+//import CustomCursor from "@/components/utils/CustomCursor";
 import { ToastContainer } from "react-toastify";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
