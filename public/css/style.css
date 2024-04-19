@@ -8456,18 +8456,20 @@ button.cinkes-side-admin-panel-close-btn:hover {
   
     .training-program-row {
       margin: -20px 0;
+      gap: 20px;
+      justify-content: center;
     }
   
     .training-program-col {
       width: 100%;
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      border-right: none;
-      border-left: none;
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
     }
   
     .training-program-col:nth-child(even) {
-      padding-left: 0;
+      padding-left: 20px;
     }
   
     .training-program-col .single-program-box {
@@ -8499,6 +8501,7 @@ button.cinkes-side-admin-panel-close-btn:hover {
     .training-program-10 .part-img img {
       width: 100%;
       height: auto;
+      border-radius: 8px;
     }
   }
 /*======= Class Schedule Section of home 10 =======*/
