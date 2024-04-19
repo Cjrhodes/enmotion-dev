@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import CustomGsapTextSplit from "../utils/CustomGsapTextSplit";
+
 import { useAppDispatch } from "@/redux/hooks";
 import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
-import SubscribeForm from "../form/SubscribeForm";
+
 const FooterSection3 = () => {
   const dispatch = useAppDispatch();
   const openContactModal = () => {
@@ -84,23 +84,8 @@ const FooterSection3 = () => {
                     transition={{ duration: 1.2 }}
                   >
                     <div className="footer-menu title-anim">
-                      <ul className="footer-menu-list mb-40">
-                        <li>
-                          <a
-                            href="tel:+786925-8086"
-                            className="foot-link title-anim"                          >
-                            + (786) 925-8086
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="miguelricaurte@hotmail.com"
-                            className="foot-link title-anim"                          >
-                            miguelricaurte@hotmail.com
-                          </a>
-                        </li>
-                      </ul>
-                      <span className="footer-10-subtitle">Follow Me:</span>
+                   
+                      <span className="footer-10-subtitle">Follow Us:</span>
                       <div className="footer-10-social">
                         <a href="https://www.facebook.com/profile.php?id=61558229676688" className="title-anim">
                           <i className="fa-brands fa-facebook-f"></i>

@@ -77,7 +77,7 @@ const TrainingProgram = () => {
                       >
                         <h3 className="program-title">
                           <CustomGsapTextSplit children={item.title} />{" "}
-                          <span>0{item.id}</span>
+                    
                         </h3>
                         <div className="row align-items-center">
                           <div className="col-9">
