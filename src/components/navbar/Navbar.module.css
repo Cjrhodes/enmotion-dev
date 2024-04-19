@@ -1,0 +1,39 @@
+/* components/Navbar.module.css */
+.navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+  }
+  
+  .navContainer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .buyTicketsBtn {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #1a1a1a;
+    padding: 10px;
+  }
+  
+  .socialLink {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+  }

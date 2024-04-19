@@ -9,6 +9,7 @@ import ContactFormModal from "@/components/modal/ContactFormModal";
 import HeroSlider from "@/components/hero/HeroSlider";
 import TrainingProgram from "@/components/program/TrainingProgram";
 import Lightbox from "@/components/modal/Lightbox";
+
 import { spaceGrotesk } from "./fonts";
 
 export const metadata: Metadata = {

@@ -139,6 +139,11 @@ button {
     border: 0;
 }
 
+.logoImg {
+    max-width: 100%;
+    height: auto;
+  }
+
 input,
 textarea {
     outline: none;
@@ -981,19 +986,101 @@ nav.navigation-12 .container-fluid {
 }
 
 
-
+.header {
+    position: relative;
+    z-index: 100;
+    transition: all 0.3s ease;
+  }
+  
+  .header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Rest of your CSS styles */
 
 /* =============02. End-Header============ */
 
 
 /* ==============03. Start-Banner============ */
 
-.banner {
+/* Red button styles */
+.buyTicketsBtn {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+   
+  }
+  
+.default-btn.red-btn {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+  
+  .default-btn.red-btn:hover {
+    background-color: #cc0000;
+  }
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 20px;
+  }
+
+  .logoImg {
+    width: 100px; /* Set to your desired width */
+    height: 70px; /* Keeps the aspect ratio intact */
+  }
+
+  .logo {
+    width: 10vw; /* Adjust percentage based on desired size and screen responsiveness */
+    height: auto;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 7px;
+  }
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .navLinks a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  .socialLinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialLink {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  
+  .banner {
     padding-top: 85px;
     background-color: var(--second-color);
     position: relative;
-}
-
+  }
 
 
 .banner .shape-1 {
@@ -10305,7 +10392,7 @@ header.header-3.pc-header-transparent {
         text-align: center; /* Center the text horizontally */
         width: 100%; /* Ensure the text block takes full width */
         position: absolute;
-        top: 30%; /* Position at half the height of the slider */
+        top: 20%; /* Position at half the height of the slider */
         left: 50%; /* Position at half the width of the slider */
         transform: translate(-50%, -50%); /* Adjust the position to truly center */
         display: flex;
@@ -10731,6 +10818,29 @@ header.header-3.pc-header-transparent {
 
 
   }
+ @media (max-width: 767px) {
+  .hero-slider-text.three {
+    text-align: center;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-slider-text.three h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: whitesmoke;
+  }
+
+  .hero-slider-text.three p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+  }
+} 
+
 
 
   

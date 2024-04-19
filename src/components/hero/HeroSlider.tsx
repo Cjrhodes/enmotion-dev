@@ -6,6 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 import { useAppDispatch } from "@/redux/hooks";
+import styles from './Slider.module.css';
 
 const HeroSlider: React.FC = () => {
   const dispatch = useAppDispatch(); // Move the hook call inside the component
@@ -51,12 +52,13 @@ const HeroSlider: React.FC = () => {
                       <div className="slider-btn">
                         <Link
                           href="#"
-                          className="default-btn"
+                          className="buyTicketsBtn"
                           onClick={openContactModal}
                         >
                           Get Started
                         </Link>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -79,14 +81,14 @@ const HeroSlider: React.FC = () => {
 
 
 
-                      <div className="slider-btn">
-                     <Link
-  href="#"
-  className="default-btn"
-  onClick={openContactModal}
->
-  Get Started
-</Link>
+<div className="slider-btn">
+                        <Link
+                          href="#"
+                          className="buyTicketsBtn"
+                          onClick={openContactModal}
+                        >
+                          Get Started
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -109,9 +111,13 @@ const HeroSlider: React.FC = () => {
 <p>En Motion offers personalized training to reach your health goals. Our certified trainers craft custom workouts for effective, motivating sessions.</p>
 
 
-                      <div className="slider-btn">
-                        <Link href="#" className="default-btn">
-                          View More
+<div className="slider-btn">
+                        <Link
+                          href="#"
+                          className="buyTicketsBtn"
+                          onClick={openContactModal}
+                        >
+                          Get Started
                         </Link>
                       </div>
                     </div>
@@ -122,33 +128,7 @@ const HeroSlider: React.FC = () => {
           </SwiperSlide>
 
         </Swiper>
-        {/* Social Wrap */}
-        <div className="social-wrap">
-          <ul>
-            <li className="follow-us">Follow Us:</li>
-            <li>
-              <a href="https://twitter.com/enmotionfit" target="_blank">
-                <i className="fa-brands fa-x"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/enmotionfit/?hl=en"
-                target="_blank"
-              >
-                <i className="bx bxl-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/profile.php?id=61558229676688"
-                target="_blank"
-              >
-                <i className="bx bxl-facebook"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+      
       </div>
     </>
   );
