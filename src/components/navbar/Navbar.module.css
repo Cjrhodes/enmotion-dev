@@ -56,9 +56,26 @@
   text-decoration: none; /* Consistently remove underline */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
+  /* Display hamburger menu on screens smaller than 1200px */
+  .hamburger {
+      display: block;
+  }
+
+  .navLinks, .socialLinks {
+      display: none;
+  }
+
+  .navLinks.open, .socialLinks.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 1199px) {
   .navContainer {
-      padding: 10px 20px; /* Reduced padding for small screens */
+    padding: 25px 100px; /* Reduced padding for small screens */
       justify-content: space-between; /* Align items to the left and right */
   }
 
@@ -67,7 +84,7 @@
       margin-right: auto; /* Pushes all other elements to the right */
   }
   .logoImg {
-    max-width: 60px; /* Set a specific max width to control size */
+    max-width: 100px; /* Set a specific max width to control size */
     height: auto; /* Maintain aspect ratio */
 }
   .hamburger {
