@@ -10496,12 +10496,14 @@ header.header-3.pc-header-transparent {
         justify-content: center;
         color: #FFFFFF;
         padding: 1rem;
+        
       }
   
       .hero-slider-text h1 {
         color: whitesmoke;
-        font-size: 48px;
+      
         margin-bottom: 1rem;
+        font-size: 80px;
       }
   
       .hero-slider-text p {
@@ -10681,9 +10683,10 @@ header.header-3.pc-header-transparent {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
   }
   .hero-slider-text h1 {
-    font-size: 64px;
+    font-size: 80px;
     color: whitesmoke;
     margin-bottom: 1.5rem;
   }
@@ -10692,6 +10695,7 @@ header.header-3.pc-header-transparent {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 2rem;
+    font-size: 80px;
   }
   
   /* Media Queries */
