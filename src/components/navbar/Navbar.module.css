@@ -9,6 +9,7 @@
   left: 0;
   width: 100%;
   z-index: 999;
+  transition: background-color 0.3s ease;
 }
 
 .logoImg {
@@ -62,6 +63,11 @@
   height: 3px;
   background-color: #fff;
   margin: 5px;
+}
+
+.solidBg {
+  background-color: #1a1a1a;
+  height: 110px;
 }
 
 @media screen and (max-width: 768px) {

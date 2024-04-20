@@ -1,16 +1,35 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSolidBg, setIsSolidBg] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSolidBg(true);
+      } else {
+        setIsSolidBg(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav>
+    <nav className={`${styles.navContainer} ${isSolidBg ? styles.solidBg : ""}`}>
     
   <div className={styles.navContainer}>
     <div className={styles.logo}>
