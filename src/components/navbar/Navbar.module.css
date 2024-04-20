@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +17,7 @@
 }
 
 .logoImg {
-  max-width: 100%;
+  max-width: 120px;
   height: auto;
 }
 
@@ -32,6 +32,18 @@
   background-color: #fff;
   margin: 5px;
   transition: all 0.3s ease;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px; /* Spacing between link items */
+  color: whitesmoke; /* Dark color for the links, replace with your preferred color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navLinks a {
+  color: inherit; /* Ensure links inherit color from the parent container */
+  text-decoration: none; /* Consistently remove underline */
 }
 
 @media (max-width: 767px) {
