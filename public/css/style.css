@@ -8450,60 +8450,63 @@ button.cinkes-side-admin-panel-close-btn:hover {
   
   @media (max-width: 767px) {
     .training-program-10 {
-      padding-top: 80px;
-      padding-bottom: 80px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
   
     .training-program-row {
-      margin: -20px 0;
-      gap: 20px;
-      justify-content: center;
+        margin: -20px 0;
+        gap: 20px;
+        justify-content: center;
+        flex-direction: column; /* Ensure elements stack vertically */
     }
   
     .training-program-col {
-      width: 100%;
-      max-width: 400px;
-      padding: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
+        width: 100%; /* Each column takes full width */
+        max-width: 100%; /* Override any other max-width settings */
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
     }
   
     .training-program-col:nth-child(even) {
-      padding-left: 20px;
+        padding-left: 20px;
+        padding-right: 20px; /* Uniform padding for consistency */
     }
   
     .training-program-col .single-program-box {
-      align-items: center;
-      text-align: center;
+        align-items: center;
+        text-align: center;
     }
   
     .training-program-10 .program-title {
-      font-size: 28px;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 0;
+        font-size: 28px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
     }
   
     .training-program-10 .program-title span {
-      font-size: 36px;
-      margin-top: 5px;
+        font-size: 36px;
+        margin-top: 5px;
     }
   
     .training-program-10 .view-btn {
-      float: none;
-      margin-top: 10px;
+        float: none;
+        margin-top: 10px;
     }
   
     .training-program-10 .part-img {
-      margin-top: 20px;
+        margin-top: 20px;
     }
   
     .training-program-10 .part-img img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
-  }
+}
+
 /*======= Class Schedule Section of home 10 =======*/
 .class-schedule-10 {
     padding-top: 120px;
