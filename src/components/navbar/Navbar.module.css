@@ -58,6 +58,7 @@
 
 @media (max-width: 767px) {
   .navContainer {
+      padding: 10px 20px; /* Reduced padding for small screens */
       justify-content: space-between; /* Align items to the left and right */
   }
 
