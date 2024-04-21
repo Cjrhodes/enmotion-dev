@@ -36,7 +36,7 @@ const page = () => {
       <div id="mainContent">
         <TrainingSection />
         <AboutSection3 />
-        <TrainingProgram />
+        <TrainingProgram trainingPrograms={[]} />
         <ScheduleSection />
         <VideoSection3 />
         <PackageSection />

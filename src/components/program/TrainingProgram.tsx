@@ -1,21 +1,61 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import CustomGsapTextSplit from "../utils/CustomGsapTextSplit";
 import CustomGsapTextSplitLine from "../utils/CustomGsapTextSplitLine";
 import { trainingProgramData } from "@/data/Data";
 import { useAppDispatch } from "@/redux/hooks";
 import { toggleLightboxOpen } from "@/redux/features/lightboxSlice";
-const TrainingProgram = () => {
+import styles from "./Training.module.css";
+import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
+interface TrainingProgram {
+  id: number;
+  title: string;
+  img: string;
+  shortDesc: string;
+  fullDesc: string;
+}
+
+interface TrainingProgramProps {
+  trainingPrograms: TrainingProgram[];
+}
+
+
+const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) => {
   const dispatch = useAppDispatch();
+  const [selectedProgram, setSelectedProgram] = useState<TrainingProgram | null>(null);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  const openModal = (program: TrainingProgram) => {
+    setSelectedProgram(program);
+  };
+
+  const closeModal = () => {
+    setSelectedProgram(null);
+  };
+
+
+
+
+  const openContactModal = () => {
+    dispatch(toggleContactModalOpen());
+    setSelectedProgram(null);
+   
+  };
+
+  const closeContactModal = () => {
+    setIsContactModalOpen(false);
+  };
+
+
   return (
     <section id="TrainingProgram">
-      <div className="training-program-10 bg-dark bg-opacity-25">
-        <div className="container">
-          <div className="section-heading-8 section-heading-10">
-            <div className="row align-items-center row-gap-lg-0 row-gap-5 ">
+      <div className={styles.trainingProgram10}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeading8}>
+            <div className={`${styles.row} ${styles.alignItemsCenter} ${styles.rowGapLg0} ${styles.rowGap5}`}>
               <motion.div
-                className="col-lg-6"
+                className={styles.col6}
                 initial={{
                   opacity: 0,
                 }}
@@ -27,12 +67,12 @@ const TrainingProgram = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <h2 className="title-anim">
-                  <CustomGsapTextSplit children="Our training programs" />
+                <h2 className={`${styles.titleAnimHeader} ${styles.textWhite}`}>
+                  <CustomGsapTextSplit>Our Training Programs</CustomGsapTextSplit>
                 </h2>
               </motion.div>
               <motion.div
-                className="col-xl-4 col-lg-6"
+                className={styles.col4}
                 initial={{
                   opacity: 0,
                 }}
@@ -44,98 +84,129 @@ const TrainingProgram = () => {
                 }}
                 viewport={{ once: true }}
               >
- 
               </motion.div>
             </div>
           </div>
-          <div className="training-program-row-wrap">
-            <div className="training-program-row">
-              {trainingProgramData.map((item) => {
-                const openLightbox = () => {
-                  dispatch(toggleLightboxOpen(item.img));
-                };
-                return (
-                  <div
-                    className="training-program-col fade_bottom"
-                    key={item.id}
-                  >
-                    <div className="single-program-box">
-                      <motion.div
-                        className="part-txt title-anim"
-                        initial={{
-                          x: -30,
-                          opacity: 0,
-                        }}
-                        whileInView={{
-                          x: 0,
-                          opacity: 1,
-                        }}
-                        transition={{
-                          duration: 1 + 0.2 * item.id,
-                        }}
-                        viewport={{ once: true }}
-                      >
-                        <h3 className="program-title">
-                          <CustomGsapTextSplit children={item.title} />{" "}
-                    
-                        </h3>
-                        <div className="row align-items-center">
-                          <div className="col-9">
+          <div className={styles.trainingProgramRowWrap}>
+            {trainingProgramData.map((item) => {
+              const openLightbox = () => {
+                dispatch(toggleLightboxOpen(item.img));
+              };
+              return (
+                <div
+                  className={`${styles.trainingProgramCol} ${styles.fadeBottom}`}
+                  key={item.id}
+                >
+                  <div className={styles.singleProgramBox}>
+                    <div className={styles.row}>
+                      <div className={styles.col6}>
+                        <motion.div
+                          className={styles.partImg}
+                          initial={{
+                            x: -50,
+                            opacity: 0,
+                          }}
+                          whileInView={{
+                            x: 0,
+                            opacity: 1,
+                          }}
+                          transition={{
+                            duration: 1.2 + 0.2 * item.id,
+                          }}
+                          viewport={{ once: true }}
+                        >
+                          <a role="button" onClick={openLightbox}>
+                            <img src={item.img} alt="image" />
+                          </a>
+                        </motion.div>
+                      </div>
+                      <div className={styles.col6}>
+                        <motion.div
+                          className={`${styles.partTxt} ${styles.titleAnim}`}
+                          initial={{
+                            x: 30,
+                            opacity: 0,
+                          }}
+                          whileInView={{
+                            x: 0,
+                            opacity: 1,
+                          }}
+                          transition={{
+                            duration: 1 + 0.2 * item.id,
+                          }}
+                          viewport={{ once: true }}
+                        >
+                          <h3 className={`${styles.programTitle} ${styles.textWhite}`}>
+                            <CustomGsapTextSplit>{item.title}</CustomGsapTextSplit>
+                          </h3>
+                          <div className={styles.textWhite}>
                             <CustomGsapTextSplitLine>
-                            {item.desc}
+                              {item.shortDesc}
                             </CustomGsapTextSplitLine>
                           </div>
-                          <div className="col-3">
-                            <a href="#" className="view-btn">
-                              <i className="fa-light fa-arrow-down-right"></i>
-                            </a>
+                          <div className={styles.buttonWrapper}>
+                            <button
+                              className={styles.viewBtn}
+                              onClick={() => openModal(item)}
+                            >
+                              Learn More
+                            </button>
                           </div>
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        className="part-img"
-                        initial={{
-                          x: 50,
-                          opacity: 0,
-                        }}
-                        whileInView={{
-                          x: 0,
-                          opacity: 1,
-                        }}
-                        transition={{
-                          duration: 1.2 + 0.2 * item.id,
-                        }}
-                        viewport={{ once: true }}
-                      >
-                        <a role="button" onClick={openLightbox}>
-                          <img src={item.img} alt="image" />
-                        </a>
-                      </motion.div>
+                        </motion.div>
+                      </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
-          <motion.div
-            initial={{
-              x: -80,
-              opacity: 0,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              duration: 1.5,
-            }}
-            viewport={{ once: true }}
-            className="section-btn-10 justify-content-center fade_bottom"
-          >
-  
-          </motion.div>
         </div>
       </div>
+
+      {selectedProgram && (
+        <div
+          className={styles.modal}
+          onClick={closeModal}
+        >
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>{selectedProgram.title}</h2>
+            <p>{selectedProgram.fullDesc}</p>
+            <button
+              className={styles.contactBtn}
+              onClick={(e) => {
+                e.stopPropagation();
+                openContactModal();
+              }}
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      )}
+
+      {isContactModalOpen && (
+        <div
+          className={styles.modal}
+          onClick={closeContactModal}
+        >
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>Contact Us</h2>
+            {/* Add your contact form or content here */}
+            <button
+              className={styles.closeBtn}
+              onClick={closeContactModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
