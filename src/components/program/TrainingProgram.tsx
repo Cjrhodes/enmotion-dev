@@ -1,13 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import CustomGsapTextSplit from "../utils/CustomGsapTextSplit";
-import CustomGsapTextSplitLine from "../utils/CustomGsapTextSplitLine";
-import { trainingProgramData } from "@/data/Data";
-import { useAppDispatch } from "@/redux/hooks";
-import { toggleLightboxOpen } from "@/redux/features/lightboxSlice";
 import styles from "./Training.module.css";
-import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
+
 interface TrainingProgram {
   id: number;
   title: string;
@@ -20,193 +15,72 @@ interface TrainingProgramProps {
   trainingPrograms: TrainingProgram[];
 }
 
-
 const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) => {
-  const dispatch = useAppDispatch();
   const [selectedProgram, setSelectedProgram] = useState<TrainingProgram | null>(null);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-
-  const openModal = (program: TrainingProgram) => {
-    setSelectedProgram(program);
-  };
-
-  const closeModal = () => {
-    setSelectedProgram(null);
-  };
-
-
-
-
-  const openContactModal = () => {
-    dispatch(toggleContactModalOpen());
-    setSelectedProgram(null);
-   
-  };
-
-  const closeContactModal = () => {
-    setIsContactModalOpen(false);
-  };
-
 
   return (
     <section id="TrainingProgram">
-      <div className={styles.trainingProgram10}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeading8}>
-            <div className={`${styles.row} ${styles.alignItemsCenter} ${styles.rowGapLg0} ${styles.rowGap5}`}>
-              <motion.div
-                className={styles.col6}
-                initial={{
-                  opacity: 0,
-                }}
-                whileInView={{
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 1.5,
-                }}
-                viewport={{ once: true }}
+      <div className="container">
+        {/* Heading */}
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <h2 className="text-white">Our Training Programs</h2>
+          </div>
+        </div>
+
+        {/* Training Programs List */}
+        {trainingPrograms.map((program, index) => (
+          <React.Fragment key={program.id}>
+            <div className="row align-items-center my-3">
+              {/* Image Column */}
+              <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-2' : ''} d-none d-md-block`}>
+                <motion.div
+                  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img src={program.img} alt={program.title} className="img-fluid" />
+                </motion.div>
+              </div>
+
+              {/* Text Column */}
+              <div className="col-12 col-md-6">
+                <div className="text-white">
+                  <h3>{program.title}</h3>
+                  <p>{program.shortDesc}</p>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => setSelectedProgram(program)}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative Separator (except after the last item) */}
+            {index < trainingPrograms.length - 1 && (
+              <hr className={`my-4 ${styles.decorativeSeparator}`} />
+            )}
+          </React.Fragment>
+        ))}
+
+        {/* Modal for selected program details */}
+        {selectedProgram && (
+          <div className={styles.modal} onClick={() => setSelectedProgram(null)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <h2>{selectedProgram.title}</h2>
+              <p>{selectedProgram.fullDesc}</p>
+              <button
+                className={styles.closeBtn}
+                onClick={() => setSelectedProgram(null)}
               >
-                <h2 className={`${styles.titleAnimHeader} ${styles.textWhite}`}>
-                  <CustomGsapTextSplit>Our Training Programs</CustomGsapTextSplit>
-                </h2>
-              </motion.div>
-              <motion.div
-                className={styles.col4}
-                initial={{
-                  opacity: 0,
-                }}
-                whileInView={{
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 1.5,
-                }}
-                viewport={{ once: true }}
-              >
-              </motion.div>
+                Close
+              </button>
             </div>
           </div>
-          <div className={styles.trainingProgramRowWrap}>
-            {trainingProgramData.map((item) => {
-              const openLightbox = () => {
-                dispatch(toggleLightboxOpen(item.img));
-              };
-              return (
-                <div
-                  className={`${styles.trainingProgramCol} ${styles.fadeBottom}`}
-                  key={item.id}
-                >
-                  <div className={styles.singleProgramBox}>
-                    <div className={styles.row}>
-                      <div className={styles.col6}>
-                        <motion.div
-                          className={styles.partImg}
-                          initial={{
-                            x: -50,
-                            opacity: 0,
-                          }}
-                          whileInView={{
-                            x: 0,
-                            opacity: 1,
-                          }}
-                          transition={{
-                            duration: 1.2 + 0.2 * item.id,
-                          }}
-                          viewport={{ once: true }}
-                        >
-                          <a role="button" onClick={openLightbox}>
-                            <img src={item.img} alt="image" />
-                          </a>
-                        </motion.div>
-                      </div>
-                      <div className={styles.col6}>
-                        <motion.div
-                          className={`${styles.partTxt} ${styles.titleAnim}`}
-                          initial={{
-                            x: 30,
-                            opacity: 0,
-                          }}
-                          whileInView={{
-                            x: 0,
-                            opacity: 1,
-                          }}
-                          transition={{
-                            duration: 1 + 0.2 * item.id,
-                          }}
-                          viewport={{ once: true }}
-                        >
-                          <h3 className={`${styles.programTitle} ${styles.textWhite}`}>
-                            <CustomGsapTextSplit>{item.title}</CustomGsapTextSplit>
-                          </h3>
-                          <div className={styles.textWhite}>
-                            <CustomGsapTextSplitLine>
-                              {item.shortDesc}
-                            </CustomGsapTextSplitLine>
-                          </div>
-                          <div className={styles.buttonWrapper}>
-                            <button
-                              className={styles.viewBtn}
-                              onClick={() => openModal(item)}
-                            >
-                              Learn More
-                            </button>
-                          </div>
-                        </motion.div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        )}
       </div>
-
-      {selectedProgram && (
-        <div
-          className={styles.modal}
-          onClick={closeModal}
-        >
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2>{selectedProgram.title}</h2>
-            <p>{selectedProgram.fullDesc}</p>
-            <button
-              className={styles.contactBtn}
-              onClick={(e) => {
-                e.stopPropagation();
-                openContactModal();
-              }}
-            >
-              Get Started
-            </button>
-          </div>
-        </div>
-      )}
-
-      {isContactModalOpen && (
-        <div
-          className={styles.modal}
-          onClick={closeContactModal}
-        >
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2>Contact Us</h2>
-            {/* Add your contact form or content here */}
-            <button
-              className={styles.closeBtn}
-              onClick={closeContactModal}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

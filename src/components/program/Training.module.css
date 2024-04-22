@@ -82,12 +82,12 @@
     padding: 0 10px;
   }
   .partImg img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
   }
   .titleAnimHeader {
     color: whitesmoke;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
@@ -101,6 +101,26 @@
     border: none;
     cursor: pointer;
   }
+
+  /* Training.module.css */
+.decorativeSeparator {
+  border: none;
+  position: relative;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.decorativeSeparator:after {
+  content: '';
+  width: 100px; /* Or any other size */
+  height: 4px;
+  background: #007bff; /* Bootstrap primary color, change as needed */
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -2px;
+}
+
   
   .partTxt {
     text-align: center;
