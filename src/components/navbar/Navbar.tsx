@@ -30,9 +30,9 @@ function TransparentNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: 'white' }} />
         <Navbar.Collapse id="basic-navbar-nav" className="custom-collapse">
           <Nav className="mx-auto">
-            <Nav.Link href="#home" style={{ color: 'white', fontSize: '1.5rem' }}>Home</Nav.Link>
-            <Nav.Link href="#About" style={{ color: 'white', fontSize: '1.5rem' }}>About</Nav.Link>
-            <Nav.Link href="#TrainingProgram" style={{ color: 'white', fontSize: '1.5rem' }}>Programs</Nav.Link>
+            <Nav.Link href="#home" style={{ color: 'white', fontSize: '1.2rem' }}>Home</Nav.Link>
+            <Nav.Link href="#About" style={{ color: 'white', fontSize: '1.2rem' }}>About</Nav.Link>
+            <Nav.Link href="#TrainingProgram" style={{ color: 'white', fontSize: '1.2rem' }}>Programs</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="https://www.facebook.com/profile.php?id=61558229676688" style={{ color: 'white', fontSize: '1.8rem' }}>

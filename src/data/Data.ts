@@ -55,7 +55,7 @@ const trainingProgramData: TrainingProgram[] = [
   {
     id: 4,
     title: "Online Services",
-    img: "img/online-training.png",
+    img: "img/online-training.jpeg",
     shortDesc: "Our online fitness programs deliver top-notch instruction in Muay Thai, Krav Maga, and kickboxing directly to you, no matter where you are.",
     fullDesc: "Our online fitness programs transcend geographical barriers, delivering top-notch instruction in Muay Thai, Krav Maga, and kickboxing directly to you, no matter where you are. Our virtual training sessions are meticulously crafted to mirror the quality and personalization of our in-studio classes, ensuring that you receive the full En Motion experience from the comfort of your home, office, or while on the move.",
   },

@@ -9,6 +9,10 @@ import HeroSlider from "@/components/hero/HeroSlider";
 import { trainingProgramData } from "@/data/Data";
 import TrainingProgram from "../components/program/TrainingProgram";
 import { spaceGrotesk } from "./fonts";
+import FounderSection from "@/components/founder/FounderSection";
+import CTASection from "@/components/cta/CallToAction";
+import DecoLineSection from "@/components/about/decoline/DecolineSection";
+
 
 export const metadata: Metadata = {
   title: "En Motion",
@@ -23,6 +27,9 @@ export default function Home() {
     <HeaderSection contactModal={true} />
     <HeroSlider />
     <AboutSection3 />
+    <CTASection />
+    <FounderSection />
+    <DecoLineSection />
     <TrainingProgram trainingPrograms={trainingProgramData} />
   </div>
    <FooterSection3 />

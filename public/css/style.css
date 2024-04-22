@@ -2266,7 +2266,9 @@ button.learning-btn:hover {
     width: 165px;
     z-index: 3;
 }
-
+.image-container {
+    padding-right: 90px; /* Adjust the padding to push more to the left if necessary */
+  }
 .about-img-10 .svg-wrap svg {
     fill: #ffffff;
     height: auto;
@@ -2276,7 +2278,14 @@ button.learning-btn:hover {
     animation: spin 15s linear infinite;
     font-size: 14px;
 }
-
+.cta-btn {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cta-btn:hover {
+    transform: scale(1.1);
+  }
+  
 .home-4-video-modal button.video-modal-close-btn:hover {
     color: var(--main-color-8);
 }
