@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 25px  225px 50px 225px;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -17,8 +17,11 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+ position: absolute;
+  left: 20px; /* Initially positioned a bit away from the corner */
+  top: 10px;
+  z-index: 1010;
+  transition: left 0.3s ease; 
 }
 
 .logoImg {
@@ -27,9 +30,17 @@
 }
 
 .hamburger {
-  display: none; /* Hide by default, will show on small screens */
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
-  background-color: transparent; 
+  background: transparent;
+  border: none;
+  outline: none;
+  z-index: 1000;
 }
 
 .hamburger.solidBg {
@@ -37,11 +48,11 @@
 }
 
 .line {
-  width: 25px;
-  height: 3px;
+  display: block;
+  width: 100%;
+  height: 2px;
   background-color: #fff;
-  margin: 5px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .navLinks {
@@ -56,24 +67,33 @@
   text-decoration: none; /* Consistently remove underline */
 }
 
-@media (max-width: 1200px) {
-  /* Display hamburger menu on screens smaller than 1200px */
-  .hamburger {
-      display: block;
-  }
-
-  .navLinks, .socialLinks {
-      display: none;
-  }
-
-  .navLinks.open, .socialLinks.open {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
+.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+/* CSS */
+.navbar {
+  transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) and (max-width: 1199px) {
+.navbar.transparentBg {
+  background-color: transparent;
+}
+
+.navbar.solidBg {
+  background-color: #333;
+}
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+.solidBg {
+  background-color: #333; /* Solid background color when scrolled */
+}
+.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+@media (max-width: 768px)  {
   .navContainer {
     padding: 25px 100px; /* Reduced padding for small screens */
       justify-content: space-between; /* Align items to the left and right */
@@ -93,10 +113,10 @@
   }
 
   .navLinks, .socialLinks {
-      display: none;
-      width: 100%;
-      text-align: center;
-      margin-top: 10px;
+   /* Show the navigation and social links when menu is open */
+   display: block;
+   padding: 10px;
+   text-align: center;
   }
 
   .navLinks.open, .socialLinks.open {

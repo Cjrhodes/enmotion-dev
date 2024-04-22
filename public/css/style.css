@@ -8337,7 +8337,16 @@ button.cinkes-side-admin-panel-close-btn:hover {
 .formula-card:hover .formula-card-img img {
     transform: scale(1.1);
 }
-
+.navbar .custom-collapse {
+    background-color: transparent; /* Ensure it's transparent on large screens */
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 992px) { /* Adjusts based on Bootstrap's 'lg' breakpoint */
+    .navbar .custom-collapse {
+      background-color: #007bff; /* Solid color for small screens */
+    }
+  }
 
 /*======= Training Program Section of home 10 =======*/
 /*======= Training Program Section of home 10 =======*/

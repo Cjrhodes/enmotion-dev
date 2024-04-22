@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 import { toggleSidebarOpen } from "@/redux/features/sidebarSlice";
 import { usePathname } from "next/navigation";
-import Navbar from "@/components/navbar/Navbar";
+import TransparentNavbar from "@/components/navbar/Navbar";
 
 type Props = {
   contactModal: boolean;
@@ -45,7 +45,7 @@ const HeaderSection = ({ contactModal }: Props) => {
 
   return (
     <header className={`header ${isHeaderFixed ? "fixed" : ""}`}>
-    <Navbar />
+    <TransparentNavbar />
   </header>
   );
 };

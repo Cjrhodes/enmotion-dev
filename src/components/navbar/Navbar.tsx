@@ -1,64 +1,54 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
+import React, { useState, useEffect } from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faXTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isSolidBg, setIsSolidBg] = useState(false);
+function TransparentNavbar() {
+  const [colorChange, setColorChange] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorChange(true);
+    } else {
+      setColorChange(false);
+    }
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsSolidBg(true);
-      } else {
-        setIsSolidBg(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
+    window.addEventListener('scroll', changeNavbarColor);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      window.removeEventListener('scroll', changeNavbarColor);
+    }
   }, []);
 
   return (
-    <nav className={`${styles.navContainer} ${isSolidBg ? styles.solidBg : ""}`}>
-      <div className={styles.logo}>
-        <a href="#">
-          <img src="/img/whitelogo.png" alt="Logo" className={styles.logoImg} />
-        </a>
-      </div>
-      <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
-        <Link href="#About">
-          <span className="dot"></span> <span className="txt">About</span>
-        </Link>
-        <Link href="#TrainingProgram">
-          <span className="dot"></span> <span className="txt">Programs</span>
-        </Link>
-      </div>
-      <div className={`${styles.socialLinks} ${isOpen ? styles.open : ""}`}>
-        <a href="https://twitter.com/enmotionfit" className="socialLink">
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61558229676688" className="socialLink">
-          <i className="fab fa-facebook"></i>
-        </a>
-        <a href="https://twitter.com/enmotionfit" className="socialLink">
-          <i className="fa-brands fa-x"></i>
-        </a>
-      </div>
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
-      </div>
-    </nav>
+    <Navbar expand="lg" fixed="top" style={{ transition: '0.4s', backgroundColor: colorChange ? 'black' : 'transparent', color: 'white' }}>
+      <Container>
+        <Navbar.Brand href="/">
+          <img src="/img/whitelogo.png" alt="Logo" style={{ height: '70px' }} />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: 'white' }} />
+        <Navbar.Collapse id="basic-navbar-nav" className="custom-collapse">
+          <Nav className="mx-auto">
+            <Nav.Link href="#home" style={{ color: 'white', fontSize: '1.5rem' }}>Home</Nav.Link>
+            <Nav.Link href="#About" style={{ color: 'white', fontSize: '1.5rem' }}>About</Nav.Link>
+            <Nav.Link href="#TrainingProgram" style={{ color: 'white', fontSize: '1.5rem' }}>Programs</Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link href="https://www.facebook.com/profile.php?id=61558229676688" style={{ color: 'white', fontSize: '1.8rem' }}>
+              <FontAwesomeIcon icon={faFacebook} />
+            </Nav.Link>
+            <Nav.Link href="https://twitter.com/enmotionfit" style={{ color: 'white', fontSize: '1.8rem' }}>
+              <FontAwesomeIcon icon={faXTwitter} />
+            </Nav.Link>
+            <Nav.Link href="https://www.instagram.com/enmotionfit/?hl=en" style={{ color: 'white', fontSize: '1.8rem' }}>
+              <FontAwesomeIcon icon={faInstagram} />
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
-export default Navbar;
+export default TransparentNavbar;
