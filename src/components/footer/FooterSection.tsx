@@ -8,7 +8,7 @@ import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 const FooterSection = () => {
   const dispatch = useAppDispatch();
   const openContactModal = () => {
-    dispatch(toggleContactModalOpen);
+    dispatch(toggleContactModalOpen({ packageName: "", packageType: "" }));
   };
   return (
     <section>

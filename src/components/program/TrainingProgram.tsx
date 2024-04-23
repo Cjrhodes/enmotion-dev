@@ -26,9 +26,10 @@ const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) =
   const dispatch = useAppDispatch();
 
   const handlePackageSelection = (packageName: string) => {
-    dispatch(toggleContactModalOpen({ packageName }));
+    dispatch(toggleContactModalOpen({ packageName, packageType: 'program' }));
     setSelectedProgram(null);
   };
+  
   return (
     <section id="TrainingProgram">
       <div className="container">

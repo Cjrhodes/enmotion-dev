@@ -11,6 +11,7 @@ import { spaceGrotesk } from "./fonts";
 import FounderSection from "@/components/founder/FounderSection";
 import CTASection from "@/components/cta/CallToAction";
 import DecoLineSection from "@/components/about/decoline/DecolineSection";
+import PricingComponent from "@/components/pricing/PricingComponent";
 
 export const metadata = {
   title: "En Motion",
@@ -25,11 +26,15 @@ export default function Home() {
         <HeaderSection contactModal={true} />
         <HeroSlider />
         <AboutSection3 />
+        <DecoLineSection />   
+        <TrainingProgram trainingPrograms={trainingProgramData} />
+        <PricingComponent/>
         <DecoLineSection />
         <FounderSection />
         <DecoLineSection />   
-        <TrainingProgram trainingPrograms={trainingProgramData} />
-        <DecoLineSection /> 
+       
+        
+
         <FooterSection3 />
 
       </div>
