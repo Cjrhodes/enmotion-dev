@@ -7,9 +7,9 @@ import ContactForm from "../form/ContactForm";
 
 const ContactFormModal = () => {
   const dispatch = useAppDispatch();
-  const isContactModalOpen = useAppSelector(
-    (state) => state.contactModal.isContactModalOpen
-  );
+  const isContactModalOpen = useAppSelector((state) => state.contactModal.isContactModalOpen);
+  const selectedPackage = useAppSelector((state) => state.contactModal.selectedPackage);
+
   const closeContactModal = () => {
     dispatch(toggleContactModalClose());
   };
@@ -24,15 +24,11 @@ const ContactFormModal = () => {
       centered
     >
       <Modal.Header>
-        <h3 className="modal-title" >
-          Contact Us
-        </h3>
-        <button onClick={closeContactModal}>
-     
-        </button>
+        <h3 className="modal-title">Contact Us</h3>
+        <button onClick={closeContactModal}></button>
       </Modal.Header>
       <Modal.Body>
-        <ContactForm selectedPackage={""} />
+        <ContactForm selectedPackage={selectedPackage} />
       </Modal.Body>
     </Modal>
   );

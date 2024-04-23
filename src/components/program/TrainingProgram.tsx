@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Training.module.css";
+import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
+import { useAppDispatch } from "@/redux/hooks";
 
 interface TrainingProgram {
   id: number;
@@ -15,9 +17,18 @@ interface TrainingProgramProps {
   trainingPrograms: TrainingProgram[];
 }
 
+interface TrainingProgramProps {
+  trainingPrograms: TrainingProgram[];
+}
+
 const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) => {
   const [selectedProgram, setSelectedProgram] = useState<TrainingProgram | null>(null);
+  const dispatch = useAppDispatch();
 
+  const handlePackageSelection = (packageName: string) => {
+    dispatch(toggleContactModalOpen({ packageName }));
+    setSelectedProgram(null);
+  };
   return (
     <section id="TrainingProgram">
       <div className="container">
@@ -65,21 +76,23 @@ const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) =
           </React.Fragment>
         ))}
 
-        {/* Modal for selected program details */}
-        {selectedProgram && (
-          <div className={styles.modal} onClick={() => setSelectedProgram(null)}>
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-              <h2>{selectedProgram.title}</h2>
-              <p>{selectedProgram.fullDesc}</p>
-              <button
-                className={styles.closeBtn}
-                onClick={() => setSelectedProgram(null)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
+{selectedProgram && (
+  <div className={styles.modal} onClick={() => setSelectedProgram(null)}>
+    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+      <h2>{selectedProgram.title}</h2>
+      <p>{selectedProgram.fullDesc}</p>
+      <button
+        className="btn btn-primary"
+        onClick={() => handlePackageSelection(selectedProgram.title)}
+      >
+        Get Started
+      </button>
+    
+    </div>
+  </div>
+)}
+
+
       </div>
     </section>
   );

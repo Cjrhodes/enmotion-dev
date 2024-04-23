@@ -19,7 +19,7 @@ const HeaderSection = ({ contactModal }: Props) => {
   const isSidebarOpen = useAppSelector((state) => state.sidebar.isSidebarOpen);
 
   const openContactModal = () => {
-    dispatch(toggleContactModalOpen());
+    dispatch(toggleContactModalOpen);
   };
 
   const openSidebar = () => {

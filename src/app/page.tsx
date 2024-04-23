@@ -1,5 +1,4 @@
 import React from "react";
-import { Metadata } from "next";
 import HeaderSection from "@/components/header/HeaderSection";
 import AboutSection3 from "@/components/about/AboutSection3";
 import FooterSection3 from "@/components/footer/FooterSection3";
@@ -13,29 +12,28 @@ import FounderSection from "@/components/founder/FounderSection";
 import CTASection from "@/components/cta/CallToAction";
 import DecoLineSection from "@/components/about/decoline/DecolineSection";
 
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "En Motion",
   description: "Developed by Chris Rhodes",
 };
+
 export default function Home() {
   return (
+    <main className={`home-11 trainer-home ${spaceGrotesk.className}`}>   
+      <SidebarSection logo="img/enmotion.png" />
+      <div id="mainContent">
+        <HeaderSection contactModal={true} />
+        <HeroSlider />
+        <AboutSection3 />
+        <DecoLineSection />
+        <FounderSection />
+        <DecoLineSection />   
+        <TrainingProgram trainingPrograms={trainingProgramData} />
+        <DecoLineSection /> 
+        <FooterSection3 />
 
-<main className={`home-11 trainer-home ${spaceGrotesk.className}`}>   
-   <SidebarSection logo="img/enmotion.png" />
-  <div id="mainContent">
-    <HeaderSection contactModal={true} />
-    <HeroSlider />
-    <AboutSection3 />
-    <CTASection />
-    <FounderSection />
-    <DecoLineSection />
-    <TrainingProgram trainingPrograms={trainingProgramData} />
-  </div>
-   <FooterSection3 />
-  <ContactFormModal />
-
- </main>
-
+      </div>
+      <ContactFormModal />
+    </main>
   );
 }

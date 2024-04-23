@@ -15,7 +15,7 @@ const SidebarSection = ({ logo, contactHashlink }: Props) => {
     dispatch(toggleSidebarClose());
   };
   const openContactModal = () => {
-    dispatch(toggleContactModalOpen());
+    dispatch(toggleContactModalOpen);
     closeSidebar();
   };
   return (
