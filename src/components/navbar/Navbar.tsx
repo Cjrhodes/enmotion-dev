@@ -33,7 +33,7 @@ function TransparentNavbar() {
             <Nav.Link href="#home" style={{ color: 'white', fontSize: '1.2rem' }}>Home</Nav.Link>
             <Nav.Link href="#About" style={{ color: 'white', fontSize: '1.2rem' }}>About</Nav.Link>
             <Nav.Link href="#TrainingProgram" style={{ color: 'white', fontSize: '1.2rem' }}>Programs</Nav.Link>
-            <Nav.Link href="#PricingComponent" style={{ color: 'white', fontSize: '1.2rem' }}>Pricing</Nav.Link>
+  
           </Nav>
           <Nav>
             <Nav.Link href="https://www.facebook.com/profile.php?id=61558229676688" style={{ color: 'white', fontSize: '1.8rem' }}>

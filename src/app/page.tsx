@@ -28,7 +28,7 @@ export default function Home() {
         <AboutSection3 />
         <DecoLineSection />   
         <TrainingProgram trainingPrograms={trainingProgramData} />
-        <PricingComponent/>
+      
         <DecoLineSection />
         <FounderSection />
         <DecoLineSection />   
