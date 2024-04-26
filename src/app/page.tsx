@@ -9,9 +9,12 @@ import { trainingProgramData } from "@/data/Data";
 import TrainingProgram from "../components/program/TrainingProgram";
 import { spaceGrotesk } from "./fonts";
 import FounderSection from "@/components/founder/FounderSection";
-import CTASection from "@/components/cta/CallToAction";
 import DecoLineSection from "@/components/about/decoline/DecolineSection";
-import PricingComponent from "@/components/pricing/PricingComponent";
+import VideoSection3 from "@/components/video/VideoSection3";
+import VideoModal from "@/components/modal/VideoModal";
+
+
+
 
 export const metadata = {
   title: "En Motion",
@@ -21,24 +24,23 @@ export const metadata = {
 export default function Home() {
   return (
     <main className={`home-11 trainer-home ${spaceGrotesk.className}`}>   
-      <SidebarSection logo="img/enmotion.png" />
+
       <div id="mainContent">
         <HeaderSection contactModal={true} />
         <HeroSlider />
         <AboutSection3 />
-        <DecoLineSection />   
-        <TrainingProgram trainingPrograms={trainingProgramData} />
       
+        <TrainingProgram trainingPrograms={trainingProgramData} />      
         <DecoLineSection />
         <FounderSection />
         <DecoLineSection />   
-       
-        
-
+        <VideoSection3/>
+        <DecoLineSection /> 
         <FooterSection3 />
-
       </div>
       <ContactFormModal />
+      <VideoModal videoUrl="https://www.youtube.com/embed/wV5yw3cqEs8?si=JcRR0qB7_lkdlX4h" />
+      
     </main>
   );
 }

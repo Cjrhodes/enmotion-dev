@@ -8,6 +8,10 @@ import "../../public/css/flaticon.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "swiper/css/bundle";
+// At the top of your component or main application file
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import "react-toastify/dist/ReactToastify.css";
 import "../../public/css/style.css";
 import "../../public/css/responsive.css";

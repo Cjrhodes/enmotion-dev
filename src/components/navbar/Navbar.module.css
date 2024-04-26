@@ -1,27 +1,28 @@
+/* Base Navigation Container */
 .navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px  225px 50px 225px;
-  position: relative;
-  top: 0;
-  left: 0;
+  padding: 25px 225px;
+  position: fixed; /* Ensures navbar is always on top */
   width: 100%;
   z-index: 999;
   transition: background-color 0.3s ease;
-  background-color: transparent;
+  background-color: #5C80BC; /* Primary Steel Blue color */
 }
 
+/* Transition to a darker color on scroll */
 .navContainer.solidBg {
-  background-color: gray /* Solid background color when scrolled */
+  background-color: #242423; /* Charleston Green for contrast */
 }
 
+/* Logo Styling */
 .logo {
- position: absolute;
-  left: 20px; /* Initially positioned a bit away from the corner */
+  position: absolute;
+  left: 20px;
   top: 10px;
   z-index: 1010;
-  transition: left 0.3s ease; 
+  transition: left 0.3s ease;
 }
 
 .logoImg {
@@ -29,11 +30,11 @@
   height: auto;
 }
 
+/* Mobile Hamburger Menu - Hidden on Desktop */
 .hamburger {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   width: 30px;
   height: 25px;
   cursor: pointer;
@@ -43,85 +44,89 @@
   z-index: 1000;
 }
 
+/* Adjust hamburger color when the navbar is solid */
 .hamburger.solidBg {
-  background-color: gray; /* Solid background color when scrolled */
+  background-color: #242423; /* Consistency with navbar color change */
 }
 
+/* Hamburger Lines */
 .line {
-  display: block;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #E8E9EB; /* Cultured for visibility on dark and light bg */
   transition: transform 0.3s ease;
 }
 
+/* Navigation Links Styling */
 .navLinks {
   display: flex;
-  gap: 20px; /* Spacing between link items */
-  color: whitesmoke; /* Dark color for the links, replace with your preferred color */
-  text-decoration: none; /* Remove underline from links */
+  gap: 20px;
+  color: #E8E9EB; /* Cultured for text to ensure readability */
 }
 
 .navLinks a {
-  color: inherit; /* Ensure links inherit color from the parent container */
-  text-decoration: none; /* Consistently remove underline */
+  color: inherit;
+  text-decoration: none;
 }
-
-.open .line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.socialNav {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
 }
-/* CSS */
-.navbar {
-  transition: background-color 0.3s ease;
+.centerNav {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.navbar.transparentBg {
-  background-color: transparent;
-}
-
-.navbar.solidBg {
-  background-color: gray;
-}
-.open .line:nth-child(2) {
-  opacity: 0;
-}
-.solidBg {
-  background-color: gray; /* Solid background color when scrolled */
-}
+/* Transformations for hamburger lines when menu is active */
+.open .line:nth-child(1),
 .open .line:nth-child(3) {
+  transform: rotate(45deg) translate(5px, 5px);
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-
-@media (max-width: 768px)  {
-  .navContainer {
-    padding: 25px 100px; /* Reduced padding for small screens */
-      justify-content: space-between; /* Align items to the left and right */
-  }
-
-  .logo {
-      order: 1; /* Ensure logo stays on the left */
-      margin-right: auto; /* Pushes all other elements to the right */
-  }
-  .logoImg {
-    max-width: 100px; /* Set a specific max width to control size */
-    height: auto; /* Maintain aspect ratio */
+.open .line:nth-child(2) {
+  opacity: 0;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 25px 50px; /* Adjust padding for smaller screens */
+  }
+
+  .logoImg {
+    max-width: 100px; /* Adjust logo size on smaller devices */
+  }
+
   .hamburger {
-      display: block; /* Make hamburger visible */
-      order: 2; /* Ensures that hamburger is on the right */
+    display: flex; /* Show hamburger menu on smaller screens */
   }
 
-  .navLinks, .socialLinks {
-   /* Show the navigation and social links when menu is open */
-   display: block;
-   padding: 10px;
-   text-align: center;
+  .navLinks,
+  .socialLinks {
+    display: none; /* Initially hide navigation links on mobile */
   }
 
-  .navLinks.open, .socialLinks.open {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .navLinks.open,
+  .socialLinks.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width for easier clickability */
+  }
+
+  .hamburger-menu { /* Add a new class for the hamburger menu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hamburger-menu .socialNav { /* Show social links inside the hamburger menu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

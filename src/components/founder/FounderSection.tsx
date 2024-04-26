@@ -8,6 +8,7 @@ const FounderSection = () => {
         <div className="col-md-8 text-center">
           <h3 className="text-white">Meet the Founder</h3>
           <Image src="/img/founder.jpg" alt="Founder" className="img-fluid rounded-circle" width={250} height={300} />
+          <h2 className= "mt-3 text-white ">Miguel Ricaurte</h2>
           <p className="mt-3 text-white">
             With over a decade of immersion in the world of combat sports and self-defense, our founder brings a unique blend of expertise to help individuals achieve their fitness goals while developing invaluable skills for personal protection.
           </p>

@@ -18,7 +18,7 @@ const VideoSection3 = () => {
                 <div className="container">
                     <div className="section-heading-8 section-heading-10">
                         <div className="row align-items-center row-gap-lg-0 row-gap-5">
-                            <motion.div 
+                        <motion.div 
                             className="col-lg-7"
                             initial={{
                                 opacity: 0
@@ -31,7 +31,7 @@ const VideoSection3 = () => {
                                 duration: 1.5
                             }}
                             >
-                                <h2 className="title-anim"><CustomGsapTextSplit children='Watch My Training Action'/></h2>
+                                <h2 className="title-anim"><CustomGsapTextSplit children='Watch Our Training Action'/></h2>
                             </motion.div>
                             <motion.div 
                             className="col-lg-5"
@@ -47,9 +47,10 @@ const VideoSection3 = () => {
                             }}
                             >
                                     <CustomGsapTextSplitLine className="title-txt title-anim">
-                                        Aerobics is a form of cardiovascular exercise that involves a combination of rhythmic movements, dance-like steps, and repetitive motions that are performed to music. It is designed to increase the heart rate and improve cardiovascular.
+                                    At En Motion, we believe personal training is all about you. Our trainers craft workouts that fit your unique needs and goals. They're your partners in wellness, helping you get fit, eat right, and stay balanced. It's not just about working out; it's about building a healthier lifestyle that works for you.
                                     </CustomGsapTextSplitLine>
                             </motion.div>
+           
                         </div>
                     </div>
                 </div>
@@ -73,7 +74,7 @@ const VideoSection3 = () => {
                     </motion.div>
                     <div className="video-box video-box-animation ms-0">
                         <motion.img 
-                        src="img/video-bg-10.png" 
+                        src="img/video-preview.jpg" 
                         alt="Image"
                         initial={{
                             scale: 1.2
@@ -88,7 +89,7 @@ const VideoSection3 = () => {
                         />
                         <div className="btn-box">
                             <BounceAnimatedBtn className="btn-bounce-animated">
-                                <a role="button" onClick={openVideoModal} className="circle-btn btn-hover play-btn" data-video-id="eAlNvWgTDZQ"><span className="dot"></span> <span className="txt"><i className="fa-thin fa-play"></i></span></a>
+                                <a role="button" onClick={openVideoModal} className="circle-btn btn-hover play-btn" data-video-id="wV5yw3cqEs8 "><span className="dot"></span> <span className="txt"><i className="fa-thin fa-play"></i></span></a>
                             </BounceAnimatedBtn>
                         </div>
                     </div>

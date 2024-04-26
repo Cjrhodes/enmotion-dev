@@ -8,6 +8,7 @@ import { toggleContactModalOpen } from "@/redux/features/contactModalSlice";
 import { useAppDispatch } from "@/redux/hooks";
 
 
+
 const HeroSlider: React.FC = () => {
   const dispatch = useAppDispatch(); // Move the hook call inside the component
 
@@ -69,7 +70,7 @@ const HeroSlider: React.FC = () => {
             <div
               className="hero-slider-item"
               style={{
-                backgroundImage: `url(/img/teamfitness.jpeg)`,
+                backgroundImage: `url(/img/corporate-wellness.jpg)`,
               }}
             >
               <div className="d-table">

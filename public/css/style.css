@@ -10492,8 +10492,18 @@ header.header-3.pc-header-transparent {
     height: 625px; 
     width: 375px; 
   }
-
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay for better text visibility */
+    z-index: 1;
+  }
   .hero-slider {
+    --swiper-theme-color: #869791; /* Define a custom property for the theme color */
+  
     .swiper-slide.swiper-slide-active {
       .hero-slider-text {
         text-align: center;
@@ -10508,174 +10518,24 @@ header.header-3.pc-header-transparent {
         justify-content: center;
         color: #FFFFFF;
         padding: 1rem;
-        
+        font-family: 'Inter', sans-serif; /* Add a modern font family */
       }
   
       .hero-slider-text h1 {
-        color: whitesmoke;
-      
+        color: var(--swiper-theme-color); /* Use the custom property for consistency */
         margin-bottom: 1rem;
-        font-size: 80px;
+        font-size: 2.5rem; /* Use a more modern font size unit */
+        font-weight: 700; /* Add font weight for better readability */
       }
   
       .hero-slider-text p {
-        font-size: 16px;
-        color: whitesmoke;
+        font-size: 1rem; /* Use a more modern font size unit */
+        color: #FFFFFF;
         margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
       }
     }
-  }
-  
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.one h1 {
-    animation: 1s 0.1s fadeInUpBig both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.one p {
-    animation: 2s 0.2s fadeInUpBig both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.one .slider-btn {
-    animation: 3s 0.3s fadeInUpBig both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.two h1 {
-    animation: 2s 0.2s fadeInLeft both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.two p {
-    animation: 3s 0.3s fadeInLeft both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.two .slider-btn {
-    animation: 2s 0.2s fadeInUpBig both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.three h1 {
-    animation: 2s 0.2s fadeInDown both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.three p {
-    animation: 2s 0.2s fadeInDown both;
-  }
-  .hero-slider-area .hero-slider .swiper-slide.swiper-slide-active .hero-slider-text.three .slider-btn {
-    animation: 2s 0.2s fadeInUp both;
-  }
-  .hero-slider-area .hero-slider .swiper-button-prev {
-    left: 50px;
-  }
-  .hero-slider-area .hero-slider .swiper-button-prev::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50px);
-    transition: all 0.5s;
-    background-image: url(/img/main-slider/prev-1.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 100px;
-    z-index: 0;
-  }
-  .hero-slider-area .hero-slider .swiper-button-prev::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.5s;
-    background-image: url(/img/main-slider/prev-2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 100px;
-    opacity: 0;
-  }
-  .hero-slider-area .hero-slider .swiper-button-prev:hover {
-    background-color: transparent;
-  }
-  .hero-slider-area .hero-slider .swiper-button-prev:hover::before {
-    opacity: 1;
-    z-index: 1;
-  }
-  .hero-slider-area .hero-slider .swiper-button-next {
-    right: 50px;
-  }
-  .hero-slider-area .hero-slider .swiper-button-next::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50px);
-    transition: all 0.5s;
-    background-image: url(/img/main-slider/next-1.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 100px;
-    z-index: 0;
-  }
-  .hero-slider-area .hero-slider .swiper-button-next::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.5s;
-    background-image: url(/img/main-slider/next-2.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 100px;
-    opacity: 0;
-  }
-  .hero-slider-area .hero-slider .swiper-button-next:hover {
-    background-color: transparent;
-  }
-  .hero-slider-area .hero-slider .swiper-button-next:hover::before {
-    opacity: 1;
-    z-index: 1;
-  }
-  .hero-slider-area .hero-slider .swiper-pagination {
-    text-align: end;
-    right: 50px;
-    bottom: 50px;
-    left: auto;
-  }
-  .hero-slider-area .hero-slider .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: #D6D6D6;
-    opacity: 1;
-  }
-  .hero-slider-area .hero-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #869791;
-  }
-  .hero-slider-area .social-wrap {
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
-    z-index: 1;
-  }
-  .hero-slider-area .social-wrap ul li {
-    display: inline-block;
-    padding: 0 5px;
-  }
-  .hero-slider-area .social-wrap ul li.follow-us {
-    text-transform: uppercase;
-    color: whitesmoke;
-    position: relative;
-    padding-right: 70px;
-  }
-  .hero-slider-area .social-wrap ul li.follow-us::before {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: 102px;
-    width: 50px;
-    height: 1px;
-    background-color: whitesmoke;
-    z-index: 1;
-  }
-  .hero-slider-area .social-wrap ul li a i {
-    color: whitesmoke;
-    transition: all 0.5s;
-  }
-  .hero-slider-area .social-wrap ul li a:hover i {
-    transform: translateY(-2px);
   }
   
   .hero-slider-item {
@@ -10684,6 +10544,9 @@ header.header-3.pc-header-transparent {
     background-size: cover;
     height: 100vh;
     position: relative;
+    display: flex; /* Add flexbox for better layout */
+    justify-content: center;
+    align-items: center;
   }
   
   .hero-slider-text {
@@ -10695,19 +10558,7 @@ header.header-3.pc-header-transparent {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-  }
-  .hero-slider-text h1 {
-    
-    color: whitesmoke;
-    margin-bottom: 1.5rem;
-  }
-  .hero-slider-text p {
-    color: whitesmoke;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
-   
+    font-family: 'Inter', sans-serif; /* Add a modern font family */
   }
   
   /* Media Queries */
@@ -10720,12 +10571,12 @@ header.header-3.pc-header-transparent {
         }
   
         .hero-slider-text h1 {
-          font-size: 38px; /* Reduced font size by 20% */
+          font-size: 1.8rem; /* Reduced font size by 20% */
           margin-bottom: 0.8rem;
         }
   
         .hero-slider-text p {
-          font-size: 13px; /* Reduced font size by 20% */
+          font-size: 0.8rem; /* Reduced font size by 20% */
           letter-spacing: 1px;
           margin-bottom: 1.2rem;
         }
@@ -10735,4 +10586,35 @@ header.header-3.pc-header-transparent {
     .hero-slider-item {
       height: calc(100vh - 60px); /* Adjust the height to create space for the navbar */
     }
+  }
+  
+  /* Additional styles to modernize and improve the presentation */
+  .hero-slider-area {
+    position: relative;
+  }
+  
+  .hero-slider-area .hero-slider {
+    position: relative;
+  }
+  
+  .hero-slider-area .hero-slider .swiper-pagination {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .hero-slider-area .social-wrap {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .hero-slider-area .social-wrap ul li a i {
+    font-size: 1.5rem; /* Increase icon size for better visibility */
+  }
+  
+
+  /* Add a modern font family to the hero slider text */
+  .hero-slider-text {
+    font-family: 'Inter', sans-serif;
   }

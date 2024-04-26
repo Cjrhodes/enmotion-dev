@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 50px;
   }
 
   .trainingProgramRowWrapper {
@@ -91,7 +92,7 @@
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 100px;
 }
 
 .viewBtn {
@@ -130,6 +131,7 @@
   .programTitle {
     align-items: center;
     margin-bottom: 10px;
+    margin-top: 50px;
   }
   
   .buttonWrapper {
