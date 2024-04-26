@@ -25,7 +25,7 @@ const AboutSection = () => {
               <div className="col-lg-7 mt-5 mt-lg-0 order-lg-2 order-1">
                 <div className="image-container d-flex justify-content-lg-end justify-content-center pr-lg-5">
                   <Image
-                    src="/img/kickboxtraining.jpeg"
+                    src="/img/video-preview.jpg"
                     alt="About Image"
                     width={500} // Increased width
                     height={600} // Increased height
