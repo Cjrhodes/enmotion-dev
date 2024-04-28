@@ -36,8 +36,7 @@ const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) =
     {/* Heading */}
     <div className="row mb-5">
       <div className="col-12 text-center">
-      <h2 className="title">Our Training Programs</h2> {/* Updated class name */}
-
+        <h2 className="text-white">Our Training Programs</h2>
       </div>
     </div>
 

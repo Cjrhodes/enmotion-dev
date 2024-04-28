@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faXTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import styles from './Navbar.module.css';
 
 function TransparentNavbar() {
@@ -16,6 +16,10 @@ function TransparentNavbar() {
     }
   };
 
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', changeNavbarColor);
     return () => {
@@ -24,57 +28,52 @@ function TransparentNavbar() {
   }, []);
 
   return (
-    <Navbar expand="lg" fixed="top" className={styles.navbar} style={{ transition: '0.4s', backgroundColor: colorChange ? 'black' : 'transparent', color: 'white' }}>
-      <Container>
-        <Navbar.Brand href="/" className={styles.navbarBrand}>
-          <img src="/img/whitelogo.png" alt="Logo" style={{ height: '70px' }} />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: 'white' }} />
-        <Navbar.Collapse id="basic-navbar-nav" className={styles.navbarCollapse}>
-          <Nav className={styles.centerNav}>
+    <>
+      <Navbar expand="lg" fixed="top" className={styles.navContainer} style={{ backgroundColor: colorChange ? 'black' : 'transparent', color: 'white' }}>
+        <Container>
+          <Navbar.Brand href="/" className={styles.logo}>
+            <img src="/img/whitelogo.png" alt="Logo" className={styles.logoImg} />
+          </Navbar.Brand>
+          <div className={styles.navLinks}>
             <Nav.Link href="#home" style={{ color: 'white', fontSize: '1.2rem' }}>Home</Nav.Link>
             <Nav.Link href="#About" style={{ color: 'white', fontSize: '1.2rem' }}>About</Nav.Link>
             <Nav.Link href="#TrainingProgram" style={{ color: 'white', fontSize: '1.2rem' }}>Programs</Nav.Link>
-          </Nav>
-          <Nav className={styles.socialNav}>
-            <Nav.Link href="(link unavailable)" style={{ color: 'white', fontSize: '1.8rem' }}>
+          </div>
+          <div className={styles.socialNav}>
+            <Nav.Link href="https://www.facebook.com/profile.php?id=61558229676688" style={{ color: 'white', fontSize: '1.8rem' }}>
               <FontAwesomeIcon icon={faFacebook} />
             </Nav.Link>
-            <Nav.Link href="(link unavailable)" style={{ color: 'white', fontSize: '1.8rem' }}>
-              <FontAwesomeIcon icon={faTwitter} />
+            <Nav.Link href="https://twitter.com/enmotionfit" style={{ color: 'white', fontSize: '1.8rem' }}>
+              <FontAwesomeIcon icon={faXTwitter} />
             </Nav.Link>
-            <Nav.Link href="(link unavailable)" style={{ color: 'white', fontSize: '1.8rem' }}>
+            <Nav.Link href="https://www.instagram.com/enmotionfit/" style={{ color: 'white', fontSize: '1.8rem' }}>
               <FontAwesomeIcon icon={faInstagram} />
             </Nav.Link>
-          </Nav>
-          <Nav className={styles.hamburgerMenu}>
-            <Nav.Link href="#" className={styles.hamburger} onClick={() => setShowMenu(!showMenu)}>
-              {/* Hamburger icon */}
-            </Nav.Link>
-            {showMenu && (
-              <div className={styles.hamburgerMenuContent}>
-                <Nav className={styles.navLinks}>
-                  <Nav.Link href="#home" style={{ color: 'white', fontSize: '1.2rem' }}>Home</Nav.Link>
-                  <Nav.Link href="#About" style={{ color: 'white', fontSize: '1.2rem' }}>About</Nav.Link>
-                  <Nav.Link href="#TrainingProgram" style={{ color: 'white', fontSize: '1.2rem' }}>Programs</Nav.Link>
-                </Nav>
-                <Nav className={styles.socialNav}>
-                  <Nav.Link href="(link unavailable)" style={{ color: 'white', fontSize: '1.8rem' }}>
-                    <FontAwesomeIcon icon={faFacebook} />
-                  </Nav.Link>
-                  <Nav.Link href="(link unavailable)" style={{ color: 'white', fontSize: '1.8rem' }}>
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </Nav.Link>
-                  <Nav.Link href="(link unavailable)" style={{ color: 'white', fontSize: '1.8rem' }}>
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </Nav.Link>
-                </Nav>
-              </div>
-            )}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          </div>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: 'white' }} onClick={toggleMenu} className={styles.hamburgerToggle} />
+        </Container>
+      </Navbar>
+
+      {/* Hamburger Menu */}
+      <div className={`${styles.hamburgerMenu} ${showMenu ? styles.open : ''}`}>
+        <div className={styles.navLinks}>
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#About">About</Nav.Link>
+          <Nav.Link href="#TrainingProgram">Programs</Nav.Link>
+      
+          <Nav.Link href="https://www.facebook.com/profile.php?id=61558229676688">
+            <FontAwesomeIcon icon={faFacebook} />
+          </Nav.Link>
+          <Nav.Link href="https://twitter.com/enmotionfit">
+            <FontAwesomeIcon icon={faXTwitter} />
+          </Nav.Link>
+          <Nav.Link href="https://www.instagram.com/enmotionfit/">
+            <FontAwesomeIcon icon={faInstagram} />
+          </Nav.Link>
+          </div>
+   
+      </div>
+    </>
   );
 }
 

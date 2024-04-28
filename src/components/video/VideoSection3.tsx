@@ -31,7 +31,7 @@ const VideoSection3 = () => {
                                 duration: 1.5
                             }}
                             >
-                                <h2 className="title-anim"><CustomGsapTextSplit children='Watch Our Training Action'/></h2>
+                                <h2 className="title-anim"><CustomGsapTextSplit children='Watch Our Training In Action'/></h2>
                             </motion.div>
                             <motion.div 
                             className="col-lg-5"
