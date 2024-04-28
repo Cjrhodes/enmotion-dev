@@ -45,7 +45,7 @@ const AboutSection = () => {
               <div className="col-lg-7 mt-4 mt-lg-0 order-lg-2 order-1">
                 <div className="image-container d-flex justify-content-lg-end justify-content-center pr-lg-5">
                   <Image
-                    src="/img/left-hook.jpg"
+                    src="/img/miguel-trainee.jpg"
                     alt="Community Image"
                     width={200}
                     height={150}
