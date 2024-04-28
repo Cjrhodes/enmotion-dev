@@ -1,40 +1,39 @@
 .hero-slider {
   --swiper-theme-color: #869791; /* Define a custom property for the theme color */
-  width: 50%; /* Set the slider's width to 50% of the screen */
-  margin: 0 auto; /* Center the slider horizontally */
+  width: 50vw; /* Set the slider's width to 50% of the viewport width */
+  margin: 0 auto; 
+  height: 50px;/* Center the slider horizontally */
 }
 
-.swiper-slide.swiper-slide-active {
-  .hero-slider-text {
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    padding: 1rem;
-    font-family: 'Inter', sans-serif; /* Add a modern font family */
-  }
+.swiper-slide.swiper-slide-active .hero-slider-text {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif; /* Add a modern font family */
+}
 
-  .hero-slider-text h1 {
-    color: var(--swiper-theme-color); /* Use the custom property for consistency */
-    margin-bottom: 1rem;
-    font-size: 2.5rem; /* Use a more modern font size unit */
-    font-weight: 700; /* Add font weight for better readability */
-  }
+.swiper-slide.swiper-slide-active .hero-slider-text h1 {
+  color: var(--swiper-theme-color); /* Use the custom property for consistency */
+  margin-bottom: 1rem;
+  font-size: 2.5rem; /* Use a more modern font size unit */
+  font-weight: 700; /* Add font weight for better readability */
+}
 
-  .hero-slider-text p {
-    font-size: 1rem; /* Use a more modern font size unit */
-    color: #FFFFFF;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+.swiper-slide.swiper-slide-active .hero-slider-text p {
+  font-size: 1rem; /* Use a more modern font size unit */
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero-slider-item {

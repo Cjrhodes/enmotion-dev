@@ -1,3 +1,4 @@
+// TrainingProgram.tsx
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -17,10 +18,6 @@ interface TrainingProgramProps {
   trainingPrograms: TrainingProgram[];
 }
 
-interface TrainingProgramProps {
-  trainingPrograms: TrainingProgram[];
-}
-
 const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) => {
   const [selectedProgram, setSelectedProgram] = useState<TrainingProgram | null>(null);
   const dispatch = useAppDispatch();
@@ -29,70 +26,68 @@ const TrainingProgram: React.FC<TrainingProgramProps> = ({ trainingPrograms }) =
     dispatch(toggleContactModalOpen({ packageName, packageType: 'program' }));
     setSelectedProgram(null);
   };
-  
+
   return (
-<section id="TrainingProgram">
-  <div className="container">
-    {/* Heading */}
-    <div className="row mb-5">
-      <div className="col-12 text-center">
-        <h2 className="text-white">Our Training Programs</h2>
-      </div>
-    </div>
-
-    {/* Training Programs List */}
-    {trainingPrograms.map((program, index) => (
-      <React.Fragment key={program.id}>
-        <div className="row align-items-center my-3">
-          {/* Image Column */}
-          <div className="col-md-6">
-            <motion.div
-              initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <img src={program.img} alt={program.title} className="img-fluid rounded" />
-            </motion.div>
+    <section id="TrainingProgram" className={styles.trainingProgramSection}>
+      <div className="container">
+        {/* Heading */}
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <h2 className={styles.sectionHeading}>Our Training Programs</h2>
           </div>
+        </div>
 
-          {/* Text Column */}
-          <div className="col-12 col-md-6">
-            <div className="text-white">
-              <h3>{program.title}</h3>
-              <p>{program.shortDesc}</p>
+        {/* Training Programs List */}
+        <div className={styles.programList}>
+          {trainingPrograms.map((program, index) => (
+            <div key={program.id} className={styles.programItem}>
+              <div className={styles.programContent}>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <h3 className={styles.programTitle}>{program.title}</h3>
+                  <p className={styles.programDescription}>{program.shortDesc}</p>
+                  <div className={styles.buttonWrapper}>
+                    <button
+                      className={`${styles.button} ${styles.learnMoreButton}`}
+                      onClick={() => setSelectedProgram(program)}
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </motion.div>
+              </div>
+              <div className={styles.programImage}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <img src={program.img} alt={program.title} className={styles.programImg} />
+                </motion.div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {selectedProgram && (
+          <div className={styles.modal} onClick={() => setSelectedProgram(null)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <h2>{selectedProgram.title}</h2>
+              <p>{selectedProgram.fullDesc}</p>
               <button
-                className="btn btn-primary"
-                onClick={() => setSelectedProgram(program)}
+                className={`${styles.button} ${styles.getStartedButton}`}
+                onClick={() => handlePackageSelection(selectedProgram.title)}
               >
-                Learn More
+                Get Started
               </button>
             </div>
           </div>
-        </div>
-
-        {/* Decorative Separator (except after the last item) */}
-        {index < trainingPrograms.length - 1 && (
-          <hr className="my-4 decorativeSeparator" />
         )}
-      </React.Fragment>
-    ))}
-
-    {selectedProgram && (
-      <div className={styles.modal} onClick={() => setSelectedProgram(null)}>
-        <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-          <h2>{selectedProgram.title}</h2>
-          <p>{selectedProgram.fullDesc}</p>
-          <button
-            className="btn btn-primary"
-            onClick={() => handlePackageSelection(selectedProgram.title)}
-          >
-            Get Started
-          </button>
-        </div>
       </div>
-    )}
-  </div>
-</section>
+    </section>
   );
 };
 
